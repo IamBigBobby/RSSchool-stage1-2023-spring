@@ -159,3 +159,43 @@ $black: #292929;
         padding-left: 40px;
     }
 }
+
+// about the shelter
+
+.about_the_shelter{
+    display: flex;
+
+    padding-top: 80px;
+    padding-left: 215px;
+    padding-right: 215px;
+
+    .text_about_shelter{
+        width: 430px;
+        height: 380px;
+
+        padding-left: 120px;
+
+        h2{
+            margin: 0;
+            padding-top: 15px;
+
+            font-family: $Georgia;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+        }
+        p{
+            margin: 0;
+            padding-top: 25px;
+
+            font-family: $Arial;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+        }
+    }
+}
+.img_about_pets{
+    display: block;
+}
