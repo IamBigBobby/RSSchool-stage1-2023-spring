@@ -17,6 +17,25 @@
 .dark_button:hover {
   background-color: #FDDCC4; }
 
+.light_button {
+  display: block;
+  width: 207px;
+  height: 52px;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background-color: #FAFAFA;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 1s; }
+
+.light_button:hover {
+  background-color: #FDDCC4; }
+
 .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
@@ -107,7 +126,8 @@
   display: flex;
   padding-top: 80px;
   padding-left: 215px;
-  padding-right: 215px; }
+  padding-right: 215px;
+  padding-bottom: 100px; }
   .about_the_shelter .text_about_shelter {
     width: 430px;
     height: 380px;
@@ -130,5 +150,79 @@
 
 .img_about_pets {
   display: block; }
+
+.background_our_friends {
+  background-color: #F6F6F6; }
+
+.our_friends {
+  display: flex;
+  flex-direction: column; }
+  .our_friends h2 {
+    padding-top: 80px;
+    margin: 0;
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center; }
+  .our_friends .pets_friends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px; }
+    .our_friends .pets_friends .circle {
+      width: 52px;
+      height: 52px;
+      position: relative;
+      border-radius: 50%;
+      border: 2px solid #F1CDB3;
+      cursor: pointer;
+      transition: 1s; }
+      .our_friends .pets_friends .circle .arrow_left {
+        position: absolute;
+        top: 22px;
+        left: 17px; }
+      .our_friends .pets_friends .circle .arrow_right {
+        position: absolute;
+        top: 22px;
+        left: 17px;
+        transform: rotate(180deg); }
+    .our_friends .pets_friends .circle:hover {
+      background-color: #FDDCC4; }
+    .our_friends .pets_friends .our_friends_about {
+      display: flex; }
+      .our_friends .pets_friends .our_friends_about .card_friend {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 45px;
+        margin-right: 45px;
+        padding-bottom: 30px;
+        border-radius: 9px;
+        background-color: #FAFAFA; }
+        .our_friends .pets_friends .our_friends_about .card_friend .photo_of_friend {
+          display: block; }
+        .our_friends .pets_friends .our_friends_about .card_friend .name_of_friend {
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 23px;
+          letter-spacing: 0.06em;
+          padding-top: 10px;
+          text-align: center;
+          color: #545454; }
+        .our_friends .pets_friends .our_friends_about .card_friend .button_learn_more {
+          width: 187px;
+          height: 52px;
+          margin-top: 10px; }
+  .our_friends .button_get_to_know {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    width: 261px;
+    height: 52px; }
 
 /*# sourceMappingURL=style.css.map */

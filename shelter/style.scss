@@ -6,8 +6,10 @@ $Georgia: Georgia;
 $grey: #F1CDB3;
 $grey_light: #FDDCC4;
 $white: #FFFFFF;
+$white_dark: #F6F6F6;
 $white-light: #FAFAFA;
 $black: #292929;
+$black_light: #545454;
 
 // buttons
 .dark_button{
@@ -32,6 +34,31 @@ $black: #292929;
     transition: 1s;
 }
 .dark_button:hover{
+    background-color: $grey_light;
+}
+
+.light_button{
+    display: block;
+
+    width: 207px;
+    height: 52px;
+    
+    font-family: $Georgia;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $black;
+
+    background-color: $white-light;
+    border: 2px solid $grey;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    transition: 1s;
+}
+.light_button:hover{
     background-color: $grey_light;
 }
 
@@ -168,6 +195,7 @@ $black: #292929;
     padding-top: 80px;
     padding-left: 215px;
     padding-right: 215px;
+    padding-bottom: 100px;
 
     .text_about_shelter{
         width: 430px;
@@ -199,3 +227,119 @@ $black: #292929;
 .img_about_pets{
     display: block;
 }
+
+// our friends
+.background_our_friends{
+    background-color: $white_dark;
+}
+.our_friends{
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        padding-top: 80px;
+        margin: 0;
+
+        font-family: $Georgia;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+
+        text-align: center;
+    }
+    .pets_friends{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 60px;
+
+        .circle{
+            width: 52px;
+            height: 52px;
+
+            position: relative;
+
+            border-radius: 50%;
+            border: 2px solid $grey;
+
+            cursor: pointer;
+
+            transition: 1s;
+
+            .arrow_left{
+                position: absolute;
+
+                top: 22px;
+                left: 17px
+            }
+            .arrow_right{
+                position: absolute;
+
+                top: 22px;
+                left: 17px;
+
+                transform: rotate(180deg);
+            }
+        }
+        .circle:hover{
+            background-color: $grey_light;
+        }
+        
+        .our_friends_about{
+            display: flex;
+
+            .card_friend{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                margin-left: 45px;
+                margin-right: 45px;
+                padding-bottom: 30px;
+
+                border-radius: 9px;
+
+                background-color: $white-light;
+
+                .photo_of_friend{
+                    display: block;
+                }
+                .name_of_friend{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: 0.06em;
+
+                    padding-top: 10px;
+
+                    text-align: center;
+
+                    color: $black_light;
+                }
+                .button_learn_more{
+                    width: 187px;
+                    height: 52px;
+
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .button_get_to_know{
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        margin-bottom: 100px;
+
+        width: 261px;
+        height: 52px;
+    }
+}
+
+
