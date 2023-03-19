@@ -225,4 +225,61 @@
     width: 261px;
     height: 52px; }
 
+.things_for_help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 127px;
+  padding-right: 127px; }
+  .things_for_help h2 {
+    margin-top: 80px;
+    font-family: Georgia;
+    font-size: 35px;
+    line-height: 130%;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #545454; }
+  .things_for_help .things {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    grid-template-columns: repeat(9, 1fr);
+    display: grid;
+    row-gap: 65px; }
+    .things_for_help .things .thing {
+      justify-self: center;
+      align-self: center; }
+    .things_for_help .things .icon_thing {
+      display: block;
+      margin: 0 auto; }
+    .things_for_help .things .name_thing {
+      margin-top: 25px;
+      font-family: Georgia;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      letter-spacing: 0.06em;
+      color: #545454;
+      text-align: center;
+      white-space: nowrap; }
+    .things_for_help .things .thing:nth-child(1) {
+      grid-column: 1 / 2; }
+    .things_for_help .things .thing:nth-child(2) {
+      grid-column: 3 / 4; }
+    .things_for_help .things .thing:nth-child(3) {
+      grid-column: 5 / 6; }
+    .things_for_help .things .thing:nth-child(4) {
+      grid-column: 7 / 8; }
+    .things_for_help .things .thing:nth-child(5) {
+      grid-column: 9 / 10; }
+    .things_for_help .things .thing:nth-child(6) {
+      grid-column: 2 / 3; }
+    .things_for_help .things .thing:nth-child(7) {
+      grid-column: 4 / 5; }
+    .things_for_help .things .thing:nth-child(8) {
+      grid-column: 6 / 7; }
+    .things_for_help .things .thing:nth-child(9) {
+      grid-column: 8 / 9; }
+
 /*# sourceMappingURL=style.css.map */

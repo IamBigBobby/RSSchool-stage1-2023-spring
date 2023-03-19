@@ -342,4 +342,87 @@ $black_light: #545454;
     }
 }
 
+// how you can help our shelter
+
+.things_for_help{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding-left: 127px;
+    padding-right: 127px;
+
+    h2{
+        margin-top: 80px;
+        
+        font-family: $Georgia;
+        font-size: 35px;
+        line-height: 130%;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        
+        text-align: center;
+        
+        color: $black_light;
+    }
+    .things{
+        margin-top: 30px;
+        margin-bottom: 100px;
+
+        grid-template-columns: repeat(9, 1fr);
+        display: grid;
+        row-gap: 65px;
+        .thing{
+            justify-self: center;
+            align-self: center;
+        }
+        .icon_thing{
+            display: block;
+            margin: 0 auto;
+        }
+        .name_thing{
+            margin-top: 25px;
+
+            font-family: $Georgia;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+            letter-spacing: 0.06em;
+
+            color: $black_light;
+            
+            text-align: center;
+            white-space: nowrap;
+        }
+        .thing:nth-child(1){
+            grid-column: 1 / 2;
+        }
+        .thing:nth-child(2){
+            grid-column: 3 / 4;
+        }
+        .thing:nth-child(3){
+            grid-column: 5 / 6;
+        }
+        .thing:nth-child(4){
+            grid-column: 7 / 8;
+        }
+        .thing:nth-child(5){
+            grid-column: 9 / 10;
+        }
+        .thing:nth-child(6){
+            grid-column: 2 / 3;
+        }
+        .thing:nth-child(7){
+            grid-column: 4 / 5;
+        }
+        .thing:nth-child(8){
+            grid-column: 6 / 7;
+        }
+        .thing:nth-child(9){
+            grid-column: 8 / 9;
+        }
+    }
+}
+
 
