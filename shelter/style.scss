@@ -72,6 +72,8 @@ $black_light: #545454;
     width: 1280px;
 }
 
+
+
 // header
 .background_header{
     height: 908px;
@@ -424,5 +426,103 @@ $black_light: #545454;
         }
     }
 }
+
+// donation
+
+.background_donation{
+    background-color: $white_dark;
+
+    .donation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid red;
+
+        padding-top: 70px;
+        padding-bottom: 88px;
+        padding-left: 183px;
+        padding-right: 183px;
+
+        .donation_dog{
+            // padding-top: 20px;
+            
+            width: 505px;
+            height: 261px;
+            display: block;
+        }
+        .information_about_donation{           
+            padding-left: 30px;
+            margin: 0;
+
+            p:nth-child(2){
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 20px; 
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 110%;
+                letter-spacing: 0.06em;
+
+                color: $black_light;
+            }
+            p:nth-child(4){
+                font-family: $Arial;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+
+                padding-top: 5px;
+
+                color: #B2B2B2;
+            }
+
+            h2{
+               margin-top: 0px;
+               margin-bottom: 0px;
+               padding-top: 10px;
+                
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color: $black_light;
+            }
+            .bank_account{
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                margin-top: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                width: 349px;
+                height: 43px;
+                border-radius: 9px;
+
+                background-color: $grey;
+
+                .number_of_card{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color: $black_light;
+                }
+            }
+        
+        }
+    }
+}
+
 
 
