@@ -74,6 +74,7 @@ $black_light: #545454;
 
 
 
+
 // header
 .background_header{
     height: 908px;
@@ -437,8 +438,6 @@ $black_light: #545454;
         align-items: center;
         justify-content: center;
 
-        border: 1px solid red;
-
         padding-top: 70px;
         padding-bottom: 88px;
         padding-left: 183px;
@@ -524,5 +523,154 @@ $black_light: #545454;
     }
 }
 
+// footer
+
+.background_footer{
+    height: 350px;
+  
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+
+    .footer_section{
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        padding-top: 40px;
+
+        .questions{
+            width: 280px;
+            height: 234px;
+
+            padding-top: 20px;
+
+            h3{
+                margin: 0;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color:#FFFFFF;
+            }
+
+            .mail{
+                cursor: pointer;
+
+                padding-top: 20px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+            .phone{
+                cursor: pointer;
+
+                padding-top: 10px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .address{
+            width: 302px;
+            height: 234px;
+
+            padding-top: 20px;
+
+            h3{
+                margin: 0;
+                padding-top: px;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color:#FFFFFF;
+            }
+
+            .boston_address{
+
+                padding-top: 10px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+            .london_address{
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .footer_doggy{
+            display: block;
+        }
+    }
+}
 
 
