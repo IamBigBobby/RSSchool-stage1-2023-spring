@@ -11,16 +11,18 @@
 <body>
    <div class="background_header">
         <header class="header wrapper">
-            <div class="logo">
-                <p>Cozy House</p>
-                <p>Shelter for pets in Boston</p>
-            </div>
+            <a class="logo_link" href="#">
+                <div class="logo">
+                    <p>Cozy House</p>
+                    <p>Shelter for pets in Boston</p>
+                </div>
+            </a>
             <nav class="navigation">
                 <ul class="list_of_navigation">
-                    <li class="elemet_of_navigation"> <a href="">About the shelter</a></li>
-                    <li class="elemet_of_navigation"> <a href="">Our pets</a></li>
-                    <li class="elemet_of_navigation"> <a href="">Help the shelter</a></li>
-                    <li class="elemet_of_navigation"> <a href="">Contacts</a></li>
+                    <li class="active_link"> <a href="">About the shelter</a></li>
+                    <li class="elemet_of_navigation"> <a href="pets.html">Our pets</a></li>
+                    <li class="elemet_of_navigation"> <a href="#things_for_help">Help the shelter</a></li>
+                    <li class="elemet_of_navigation"> <a href="#contacts">Contacts</a></li>
                 </ul>
             </nav> 
         </header>
@@ -28,7 +30,9 @@
             <div class="left_side_section">
                 <h1>Not only people need a house</h1>
                 <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                <button class="dark_button">Make a friend</button>
+                <a class="link_to_pets" href="pets.html">
+                    <button class="dark_button">Make a friend</button>
+                </a>
             </div>
             <img class="right_side_section" src="assets/png/start-screen-puppy.png" alt="start-screen-puppy">
         </section>
@@ -69,10 +73,10 @@
                     <img class="arrow arrow_right" src="assets/png/Arrow_left.png" alt="arrow_rigth">
                 </div>
             </div>
-            <button class="dark_button button_get_to_know">Get to know the rest</button>
+            <a class="link_to_pets" href="pets.html"><button class="dark_button button_get_to_know">Get to know the rest</button></a>
         </section>
    </div>
-   <section class="things_for_help wrapper">
+   <section id="things_for_help" class="things_for_help wrapper">
         <h2>How you can help <br> our shelter</h2>
         <div class="things">
             <div class="thing">
@@ -127,7 +131,7 @@
         </div>
     </section>
    </div>
-   <footer class="footer">
+   <footer id="contacts" class="footer">
         <div class="background_footer">
             <section class="footer_section wrapper">
                 <div class="questions">
