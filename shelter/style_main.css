@@ -1,8 +1,13 @@
 html {
   scroll-behavior: smooth; }
 
-.link_to_pets {
+.link_to {
+  display: block;
+  display: flex;
   text-decoration: none; }
+  .link_to span {
+    display: block;
+    padding-top: 15px; }
 
 .logo_link {
   text-decoration: none; }
@@ -20,6 +25,7 @@ html {
   background-color: #F1CDB3;
   border: none;
   border-radius: 100px;
+  text-align: center;
   cursor: pointer;
   transition: 1s; }
 
@@ -235,6 +241,7 @@ html {
           margin-top: 10px; }
   .our_friends .button_get_to_know {
     display: block;
+    text-decoration: none;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;

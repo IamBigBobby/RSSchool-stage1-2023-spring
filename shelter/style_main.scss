@@ -16,14 +16,24 @@ $black: #292929;
 $black_light: #545454;
 
 // link
-.link_to_pets{
+.link_to{
+    display: block;
+    display: flex;
     text-decoration: none;
+
+    span{
+        display: block;
+        
+        padding-top: 15px;
+    }
 }
 .logo_link{
     text-decoration: none;
 }
 
 // buttons
+
+
 
 .dark_button{
 
@@ -42,6 +52,8 @@ $black_light: #545454;
     background-color: $grey;
     border: none;
     border-radius: 100px;
+
+    text-align: center;
 
     cursor: pointer;
 
@@ -362,6 +374,8 @@ $black_light: #545454;
     }
     .button_get_to_know{
         display: block;
+
+        text-decoration: none;
 
         margin-left: auto;
         margin-right: auto;

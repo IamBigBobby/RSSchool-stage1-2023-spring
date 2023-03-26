@@ -1,3 +1,12 @@
+html {
+  scroll-behavior: smooth; }
+
+.link_to_main {
+  text-decoration: none; }
+
+.logo_link {
+  text-decoration: none; }
+
 .dark_button {
   display: block;
   width: 207px;
@@ -84,6 +93,14 @@
     color: #545454;
     text-decoration-line: none; }
   .navigation .list_of_navigation .elemet_of_navigation a:hover {
+    border-bottom: 3px solid #F1CDB3; }
+  .navigation .list_of_navigation .active_link a {
+    padding-bottom: 3px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    color: #545454;
+    text-decoration-line: none;
     border-bottom: 3px solid #F1CDB3; }
 
 .main {

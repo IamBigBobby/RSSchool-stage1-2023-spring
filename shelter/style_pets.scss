@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 // fonts
 $Arial: Arial;
 $Georgia: Georgia;
@@ -10,6 +14,14 @@ $white_dark: #F6F6F6;
 $white-light: #FAFAFA;
 $black: #292929;
 $black_light: #545454;
+
+// link
+.link_to_main{
+    text-decoration: none;
+}
+.logo_link{
+    text-decoration: none;
+}
 
 // buttons
 .dark_button{
@@ -133,6 +145,20 @@ $black_light: #545454;
             a:hover{
                 border-bottom: 3px solid $grey;
             }
+        }
+        .active_link{
+            a{
+                padding-bottom: 3px;
+
+                font-family: $Arial;
+                font-size: 15px;
+                font-weight: 400;
+
+                color: $black_light;
+                text-decoration-line: none;
+
+                border-bottom: 3px solid $grey;
+            }   
         }
     }
 }
