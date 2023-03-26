@@ -1,0 +1,718 @@
+html{
+    scroll-behavior: smooth;
+}
+
+// fonts
+$Arial: Arial;
+$Georgia: Georgia;
+
+// colors
+$grey: #F1CDB3;
+$grey_light: #FDDCC4;
+$white: #FFFFFF;
+$white_dark: #F6F6F6;
+$white-light: #FAFAFA;
+$black: #292929;
+$black_light: #545454;
+
+// link
+.link_to{
+    display: block;
+    display: flex;
+    text-decoration: none;
+
+    span{
+        display: block;
+        
+        padding-top: 15px;
+    }
+}
+.logo_link{
+    text-decoration: none;
+}
+
+// buttons
+
+
+
+.dark_button{
+
+    display: block;
+
+    width: 207px;
+    height: 52px;
+    
+    font-family: $Georgia;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $black;
+
+    background-color: $grey;
+    border: none;
+    border-radius: 100px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 1s;
+}
+.dark_button:hover{
+    background-color: $grey_light;
+}
+
+.light_button{
+    display: block;
+
+    width: 207px;
+    height: 52px;
+    
+    font-family: $Georgia;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $black;
+
+    background-color: $white-light;
+    border: 2px solid $grey;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    transition: 1s;
+}
+.light_button:hover{
+    background-color: $grey_light;
+}
+
+
+.wrapper{
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    padding: 0px 40px;
+
+    width: 1280px;
+}
+
+
+
+// main
+// header
+.background_header{
+    height: 908px;
+  
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%)
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 60px;
+}
+.logo{
+    width: 184px;
+    height: 60px;
+
+    p:first-child{
+        font-family: $Georgia;
+        font-size: 32px;
+        line-height: 110%;
+        font-weight: 400;
+        color: $grey;
+        margin: 0;
+        letter-spacing: 0.04em;
+
+        text-align: center;
+    }
+    p:nth-child(2){
+        font-family: $Arial;
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: 400;
+        margin: 0px;
+        padding-top: 10px;
+        color: $white;
+        letter-spacing: 0.11em;
+
+        text-align: center;
+    }
+}
+.navigation{
+    .list_of_navigation{
+        display: flex;
+        justify-content: space-between;
+
+        width: 443px;
+
+        list-style-type: none;
+
+        .elemet_of_navigation{
+            a{
+                padding-bottom: 3px;
+
+                font-family: $Arial;
+                font-size: 15px;
+                font-weight: 400;
+
+                color: #FAFAFA;
+                text-decoration-line: none;
+            }
+            a:hover{
+                border-bottom: 3px solid $grey;
+            }
+        }
+        .active_link{
+            a{
+                padding-bottom: 3px;
+
+                font-family: $Arial;
+                font-size: 15px;
+                font-weight: 400;
+
+                color: #FAFAFA;
+                text-decoration-line: none;
+
+                border-bottom: 3px solid $grey;
+            }   
+        }
+    }
+}
+
+// not only
+
+.not_only{
+    display: flex;
+    align-items: center;
+
+    padding-top: 60px;
+
+    .left_side_section{
+        display: flex;
+        flex-direction: column;
+
+        width: 460px;
+        height: 400px;
+        h1{
+            width: 310px;
+            height: 114px;
+
+            margin: 0;
+
+            font-family: $Georgia;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 130%;
+            color: $white;
+        }
+        p{
+            width: 460px;
+            height: 72px;
+
+            padding-top: 25px;
+            padding-bottom: 30px;
+
+            font-family: $Arial;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            color: $white;
+
+            align-items: center;
+        }
+    }
+    .right_side_section{
+        display: block;
+        padding-left: 40px;
+    }
+}
+
+// about the shelter
+
+.about_the_shelter{
+    display: flex;
+
+    padding-top: 80px;
+    padding-left: 215px;
+    padding-right: 215px;
+    padding-bottom: 100px;
+
+    .text_about_shelter{
+        width: 430px;
+        height: 380px;
+
+        padding-left: 120px;
+
+        h2{
+            margin: 0;
+            padding-top: 15px;
+
+            font-family: $Georgia;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+        }
+        p{
+            margin: 0;
+            padding-top: 25px;
+
+            font-family: $Arial;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+        }
+    }
+}
+.img_about_pets{
+    display: block;
+}
+
+// our friends
+.background_our_friends{
+    background-color: $white_dark;
+}
+.our_friends{
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        padding-top: 80px;
+        margin: 0;
+
+        font-family: $Georgia;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+
+        text-align: center;
+    }
+    .pets_friends{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 60px;
+
+        .circle{
+            width: 52px;
+            height: 52px;
+
+            position: relative;
+
+            border-radius: 50%;
+            border: 2px solid $grey;
+
+            cursor: pointer;
+
+            transition: 1s;
+
+            .arrow_left{
+                position: absolute;
+
+                top: 22px;
+                left: 17px
+            }
+            .arrow_right{
+                position: absolute;
+
+                top: 22px;
+                left: 17px;
+
+                transform: rotate(180deg);
+            }
+        }
+        .circle:hover{
+            background-color: $grey_light;
+        }
+        
+        .our_friends_about{
+            display: flex;
+
+            .card_friend{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                margin-left: 45px;
+                margin-right: 45px;
+                padding-bottom: 30px;
+
+                border-radius: 9px;
+
+                background-color: $white-light;
+
+                .photo_of_friend{
+                    display: block;
+                }
+                .name_of_friend{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: 0.06em;
+
+                    padding-top: 10px;
+
+                    text-align: center;
+
+                    color: $black_light;
+                }
+                .button_learn_more{
+                    width: 187px;
+                    height: 52px;
+
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .button_get_to_know{
+        display: block;
+
+        text-decoration: none;
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        margin-bottom: 100px;
+
+        width: 261px;
+        height: 52px;
+    }
+}
+
+// how you can help our shelter
+
+.things_for_help{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding-left: 127px;
+    padding-right: 127px;
+
+    h2{
+        margin-top: 80px;
+        
+        font-family: $Georgia;
+        font-size: 35px;
+        line-height: 130%;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        
+        text-align: center;
+        
+        color: $black_light;
+    }
+    .things{
+        margin-top: 30px;
+        margin-bottom: 100px;
+
+        grid-template-columns: repeat(9, 1fr);
+        display: grid;
+        row-gap: 65px;
+        .thing{
+            justify-self: center;
+            align-self: center;
+        }
+        .icon_thing{
+            display: block;
+            margin: 0 auto;
+        }
+        .name_thing{
+            margin-top: 25px;
+
+            font-family: $Georgia;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+            letter-spacing: 0.06em;
+
+            color: $black_light;
+            
+            text-align: center;
+            white-space: nowrap;
+        }
+        .thing:nth-child(1){
+            grid-column: 1 / 2;
+        }
+        .thing:nth-child(2){
+            grid-column: 3 / 4;
+        }
+        .thing:nth-child(3){
+            grid-column: 5 / 6;
+        }
+        .thing:nth-child(4){
+            grid-column: 7 / 8;
+        }
+        .thing:nth-child(5){
+            grid-column: 9 / 10;
+        }
+        .thing:nth-child(6){
+            grid-column: 2 / 3;
+        }
+        .thing:nth-child(7){
+            grid-column: 4 / 5;
+        }
+        .thing:nth-child(8){
+            grid-column: 6 / 7;
+        }
+        .thing:nth-child(9){
+            grid-column: 8 / 9;
+        }
+    }
+}
+
+// donation
+
+.background_donation{
+    background-color: $white_dark;
+
+    .donation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 70px;
+        padding-bottom: 88px;
+        padding-left: 183px;
+        padding-right: 183px;
+
+        .donation_dog{
+            // padding-top: 20px;
+            
+            width: 505px;
+            height: 261px;
+            display: block;
+        }
+        .information_about_donation{           
+            padding-left: 30px;
+            margin: 0;
+
+            p:nth-child(2){
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 20px; 
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 110%;
+                letter-spacing: 0.06em;
+
+                color: $black_light;
+            }
+            p:nth-child(4){
+                font-family: $Arial;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+
+                padding-top: 5px;
+
+                color: #B2B2B2;
+            }
+
+            h2{
+               margin-top: 0px;
+               margin-bottom: 0px;
+               padding-top: 10px;
+                
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color: $black_light;
+            }
+            .bank_account{
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                margin-top: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                width: 349px;
+                height: 43px;
+                border-radius: 9px;
+
+                background-color: $grey;
+
+                .number_of_card{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color: $black_light;
+                }
+            }
+        
+        }
+    }
+}
+
+// footer
+
+.background_footer{
+    height: 350px;
+  
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+
+    .footer_section{
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        padding-top: 40px;
+
+        .questions{
+            width: 280px;
+            height: 234px;
+
+            padding-top: 20px;
+
+            h3{
+                margin: 0;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color:#FFFFFF;
+            }
+
+            .mail{
+                cursor: pointer;
+
+                padding-top: 20px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+            .phone{
+                cursor: pointer;
+
+                padding-top: 10px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .address{
+            width: 302px;
+            height: 234px;
+
+            padding-top: 20px;
+
+            h3{
+                margin: 0;
+                padding-top: px;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color:#FFFFFF;
+            }
+
+            .boston_address{
+
+                padding-top: 10px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+            .london_address{
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .footer_doggy{
+            display: block;
+        }
+    }
+}
+
+

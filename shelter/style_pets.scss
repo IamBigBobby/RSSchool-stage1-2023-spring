@@ -1,0 +1,425 @@
+html{
+    scroll-behavior: smooth;
+}
+
+// fonts
+$Arial: Arial;
+$Georgia: Georgia;
+
+// colors
+$grey: #F1CDB3;
+$grey_light: #FDDCC4;
+$white: #FFFFFF;
+$white_dark: #F6F6F6;
+$white-light: #FAFAFA;
+$black: #292929;
+$black_light: #545454;
+
+// link
+.link_to_main{
+    text-decoration: none;
+}
+.logo_link{
+    text-decoration: none;
+}
+
+// buttons
+.dark_button{
+    display: block;
+
+    width: 207px;
+    height: 52px;
+    
+    font-family: $Georgia;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $black;
+
+    background-color: $grey;
+    border: none;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    transition: 1s;
+}
+.dark_button:hover{
+    background-color: $grey_light;
+}
+
+.light_button{
+    display: block;
+
+    width: 207px;
+    height: 52px;
+    
+    font-family: $Georgia;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $black;
+
+    background-color: $white-light;
+    border: 2px solid $grey;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    transition: 1s;
+}
+.light_button:hover{
+    background-color: $grey_light;
+}
+
+
+.wrapper{
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    padding: 0px 40px;
+
+    width: 1280px;
+}
+
+
+// main
+// header
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.logo{
+    width: 184px;
+    height: 60px;
+
+    p:first-child{
+        font-family: $Georgia;
+        font-size: 32px;
+        line-height: 110%;
+        font-weight: 400;
+        color: $black_light;
+        margin: 0;
+        letter-spacing: 0.04em;
+
+        text-align: center;
+    }
+    p:nth-child(2){
+        font-family: $Arial;
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: 400;
+        margin: 0px;
+        padding-top: 10px;
+        color: $black;
+        letter-spacing: 0.11em;
+
+        text-align: center;
+    }
+}
+.navigation{
+    .list_of_navigation{
+        display: flex;
+        justify-content: space-between;
+
+        width: 443px;
+
+        list-style-type: none;
+
+        .elemet_of_navigation{
+            a{
+                padding-bottom: 3px;
+
+                font-family: $Arial;
+                font-size: 15px;
+                font-weight: 400;
+
+                color: $black_light;
+                text-decoration-line: none;
+            }
+            a:hover{
+                border-bottom: 3px solid $grey;
+            }
+        }
+        .active_link{
+            a{
+                padding-bottom: 3px;
+
+                font-family: $Arial;
+                font-size: 15px;
+                font-weight: 400;
+
+                color: $black_light;
+                text-decoration-line: none;
+
+                border-bottom: 3px solid $grey;
+            }   
+        }
+    }
+}
+
+// main
+
+.main{
+    background-color: $white_dark;
+}
+.friends_looking_for{
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin: 0px;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        
+        text-align: center;
+        font-family: $Georgia;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: $black_light;
+    }
+    .collection_of_pets{
+
+        padding-top: 20px;
+
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 30px;
+        
+        .pet{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            border-radius: 9px;
+            width: 270px;
+            height: 435px;
+
+            background-color: $white-light;
+            .img_pet{
+                display: block;
+            }
+            .pet_name{
+                text-align: center;
+
+                margin-top: 28px;
+                margin-bottom: 30px;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+                letter-spacing: 0.06em;
+                color: $black_light;
+            }
+            .button_learn_more{
+                width: 187px;
+            }
+        }
+    }
+    .status_bar{
+        width: 340px;
+        margin: 57px auto 95px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .circle{
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            .jackdaw{
+                display: block;
+                margin: 0 auto;
+                padding-top: 20px;
+            }
+        }
+        .inactive_circle{
+            border: 2px solid #CDCDCD;
+        }
+        .active_circle{
+            border: 2px solid $grey;
+            transition: 1s;
+        }
+        .active_circle:hover{
+            background-color: $grey;
+        }
+        .circle_number{
+            background-color: $grey;
+
+            span{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                padding-top: 15px;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 115%;
+                letter-spacing: 0.06em;
+            }
+        }
+    }
+}
+// footer
+
+.background_footer{
+    height: 350px;
+  
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+
+    .footer_section{
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        padding-top: 40px;
+
+        .questions{
+            width: 280px;
+            height: 234px;
+
+            padding-top: 20px;
+
+            h3{
+                margin: 0;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color:#FFFFFF;
+            }
+
+            .mail{
+                cursor: pointer;
+
+                padding-top: 20px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+            .phone{
+                cursor: pointer;
+
+                padding-top: 10px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .address{
+            width: 302px;
+            height: 234px;
+
+            padding-top: 20px;
+
+            h3{
+                margin: 0;
+                padding-top: px;
+
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+
+                color:#FFFFFF;
+            }
+
+            .boston_address{
+
+                padding-top: 10px;
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+            .london_address{
+
+                a{
+                    display: flex;
+
+                    text-decoration: none;
+
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+
+                    color:$grey;
+
+                    p{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .footer_doggy{
+            display: block;
+        }
+    }
+}

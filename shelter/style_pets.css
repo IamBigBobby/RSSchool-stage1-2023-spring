@@ -1,0 +1,274 @@
+html {
+  scroll-behavior: smooth; }
+
+.link_to_main {
+  text-decoration: none; }
+
+.logo_link {
+  text-decoration: none; }
+
+.dark_button {
+  display: block;
+  width: 207px;
+  height: 52px;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background-color: #F1CDB3;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 1s; }
+
+.dark_button:hover {
+  background-color: #FDDCC4; }
+
+.light_button {
+  display: block;
+  width: 207px;
+  height: 52px;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background-color: #FAFAFA;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 1s; }
+
+.light_button:hover {
+  background-color: #FDDCC4; }
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0px 40px;
+  width: 1280px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.logo {
+  width: 184px;
+  height: 60px; }
+  .logo p:first-child {
+    font-family: Georgia;
+    font-size: 32px;
+    line-height: 110%;
+    font-weight: 400;
+    color: #545454;
+    margin: 0;
+    letter-spacing: 0.04em;
+    text-align: center; }
+  .logo p:nth-child(2) {
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+    margin: 0px;
+    padding-top: 10px;
+    color: #292929;
+    letter-spacing: 0.11em;
+    text-align: center; }
+
+.navigation .list_of_navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 443px;
+  list-style-type: none; }
+  .navigation .list_of_navigation .elemet_of_navigation a {
+    padding-bottom: 3px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    color: #545454;
+    text-decoration-line: none; }
+  .navigation .list_of_navigation .elemet_of_navigation a:hover {
+    border-bottom: 3px solid #F1CDB3; }
+  .navigation .list_of_navigation .active_link a {
+    padding-bottom: 3px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    color: #545454;
+    text-decoration-line: none;
+    border-bottom: 3px solid #F1CDB3; }
+
+.main {
+  background-color: #F6F6F6; }
+
+.friends_looking_for {
+  display: flex;
+  flex-direction: column; }
+  .friends_looking_for h1 {
+    margin: 0px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454; }
+  .friends_looking_for .collection_of_pets {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 30px; }
+    .friends_looking_for .collection_of_pets .pet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 9px;
+      width: 270px;
+      height: 435px;
+      background-color: #FAFAFA; }
+      .friends_looking_for .collection_of_pets .pet .img_pet {
+        display: block; }
+      .friends_looking_for .collection_of_pets .pet .pet_name {
+        text-align: center;
+        margin-top: 28px;
+        margin-bottom: 30px;
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        color: #545454; }
+      .friends_looking_for .collection_of_pets .pet .button_learn_more {
+        width: 187px; }
+  .friends_looking_for .status_bar {
+    width: 340px;
+    margin: 57px auto 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .friends_looking_for .status_bar .circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer; }
+      .friends_looking_for .status_bar .circle .jackdaw {
+        display: block;
+        margin: 0 auto;
+        padding-top: 20px; }
+    .friends_looking_for .status_bar .inactive_circle {
+      border: 2px solid #CDCDCD; }
+    .friends_looking_for .status_bar .active_circle {
+      border: 2px solid #F1CDB3;
+      transition: 1s; }
+    .friends_looking_for .status_bar .active_circle:hover {
+      background-color: #F1CDB3; }
+    .friends_looking_for .status_bar .circle_number {
+      background-color: #F1CDB3; }
+      .friends_looking_for .status_bar .circle_number span {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 15px;
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em; }
+
+.background_footer {
+  height: 350px;
+  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); }
+  .background_footer .footer_section {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px; }
+    .background_footer .footer_section .questions {
+      width: 280px;
+      height: 234px;
+      padding-top: 20px; }
+      .background_footer .footer_section .questions h3 {
+        margin: 0;
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: #FFFFFF; }
+      .background_footer .footer_section .questions .mail {
+        cursor: pointer;
+        padding-top: 20px; }
+        .background_footer .footer_section .questions .mail a {
+          display: flex;
+          text-decoration: none;
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #F1CDB3; }
+          .background_footer .footer_section .questions .mail a p {
+            padding-left: 20px; }
+      .background_footer .footer_section .questions .phone {
+        cursor: pointer;
+        padding-top: 10px; }
+        .background_footer .footer_section .questions .phone a {
+          display: flex;
+          text-decoration: none;
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #F1CDB3; }
+          .background_footer .footer_section .questions .phone a p {
+            padding-left: 20px; }
+    .background_footer .footer_section .address {
+      width: 302px;
+      height: 234px;
+      padding-top: 20px; }
+      .background_footer .footer_section .address h3 {
+        margin: 0;
+        padding-top: px;
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: #FFFFFF; }
+      .background_footer .footer_section .address .boston_address {
+        padding-top: 10px; }
+        .background_footer .footer_section .address .boston_address a {
+          display: flex;
+          text-decoration: none;
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #F1CDB3; }
+          .background_footer .footer_section .address .boston_address a p {
+            padding-left: 20px; }
+      .background_footer .footer_section .address .london_address a {
+        display: flex;
+        text-decoration: none;
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: #F1CDB3; }
+        .background_footer .footer_section .address .london_address a p {
+          padding-left: 20px; }
+    .background_footer .footer_section .footer_doggy {
+      display: block; }
+
+/*# sourceMappingURL=style_pets.css.map */
