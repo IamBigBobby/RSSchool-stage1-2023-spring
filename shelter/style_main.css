@@ -55,10 +55,10 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0px 40px;
-  width: 1280px; }
+  max-width: 1280px; }
 
 .background_header {
-  height: 908px;
+  min-height: 908px;
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); }
 
 .header {
@@ -91,8 +91,9 @@ html {
 
 .navigation .list_of_navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 443px;
+  min-width: 443px;
   list-style-type: none; }
   .navigation .list_of_navigation .elemet_of_navigation a {
     padding-bottom: 3px;
@@ -114,6 +115,7 @@ html {
 
 .not_only {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding-top: 60px; }
   .not_only .left_side_section {
@@ -147,12 +149,13 @@ html {
 
 .about_the_shelter {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 80px;
   padding-left: 215px;
   padding-right: 215px;
   padding-bottom: 100px; }
   .about_the_shelter .text_about_shelter {
-    width: 430px;
+    max-width: 430px;
     height: 380px;
     padding-left: 120px; }
     .about_the_shelter .text_about_shelter h2 {
@@ -457,5 +460,29 @@ html {
           padding-left: 20px; }
     .background_footer .footer_section .footer_doggy {
       display: block; }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 30px 30px; }
+
+  .background_header {
+    height: 1165px; }
+
+  .header {
+    flex-wrap: wrap; }
+
+  .not_only {
+    flex-wrap: wrap;
+    justify-content: center; }
+
+  .left_side_section .dark_button {
+    align-self: center; }
+
+  .right_side_section {
+    width: 569px;
+    height: 593px;
+    margin-top: 21px;
+    margin-left: 100px; } }
 
 /*# sourceMappingURL=style_main.css.map */
