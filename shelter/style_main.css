@@ -91,19 +91,20 @@ html {
 
 .navigation .list_of_navigation {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  min-width: 443px;
+  width: 443px;
   list-style-type: none; }
-  .navigation .list_of_navigation .elemet_of_navigation a {
-    padding-bottom: 3px;
-    font-family: Arial;
-    font-size: 15px;
-    font-weight: 400;
-    color: #FAFAFA;
-    text-decoration-line: none; }
-  .navigation .list_of_navigation .elemet_of_navigation a:hover {
-    border-bottom: 3px solid #F1CDB3; }
+  .navigation .list_of_navigation .elemet_of_navigation {
+    display: block; }
+    .navigation .list_of_navigation .elemet_of_navigation a {
+      padding-bottom: 3px;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: 400;
+      color: #FAFAFA;
+      text-decoration-line: none; }
+    .navigation .list_of_navigation .elemet_of_navigation a:hover {
+      border-bottom: 3px solid #F1CDB3; }
   .navigation .list_of_navigation .active_link a {
     padding-bottom: 3px;
     font-family: Arial;
@@ -471,19 +472,19 @@ html {
 
   .header {
     flex-wrap: wrap; }
+    .header .navigation .list_of_navigation {
+      display: flex; }
 
   .not_only {
     flex-wrap: wrap;
     justify-content: center; }
-
-  .left_side_section .dark_button {
-    align-self: center; }
-
-  .right_side_section {
-    width: 569px;
-    height: 593px;
-    margin-top: 21px;
-    margin-left: 100px; }
+    .not_only .left_side_section .dark_button {
+      align-self: center; }
+    .not_only .right_side_section {
+      width: 569px;
+      height: 593px;
+      margin-top: 21px;
+      margin-left: 100px; }
 
   .about_the_shelter {
     padding-top: 65px;
@@ -493,5 +494,14 @@ html {
     .about_the_shelter .text_about_shelter {
       padding: 0px;
       order: -1; } }
+@media screen and (max-width: 730px) {
+  .not_only .right_side_section {
+    display: none; }
+
+  .header {
+    flex-direction: column; }
+    .header .navigation .list_of_navigation {
+      width: 100px;
+      flex-direction: column; } }
 
 /*# sourceMappingURL=style_main.css.map */

@@ -144,14 +144,14 @@ $black_light: #545454;
 .navigation{
     .list_of_navigation{
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
 
-        min-width: 443px;
+        width: 443px;
 
         list-style-type: none;
 
         .elemet_of_navigation{
+            display: block;
             a{
                 padding-bottom: 3px;
 
@@ -729,24 +729,31 @@ $black_light: #545454;
     }
     .header{
         flex-wrap: wrap;
+
+        .navigation{
+            .list_of_navigation{
+                display: flex;
+            }
+        }
     }
     .not_only{
         flex-wrap: wrap;
         justify-content: center;
-    }
 
-    .left_side_section{
-        .dark_button{
-            align-self: center;
+        .left_side_section{
+            .dark_button{
+                align-self: center;
+            }
+        }
+        .right_side_section{
+            width: 569px;
+            height: 593px;
+    
+            margin-top: 21px;
+            margin-left: 100px;
         }
     }
-    .right_side_section{
-        width: 569px;
-        height: 593px;
 
-        margin-top: 21px;
-        margin-left: 100px;
-    }
     // about the shelter
 
     .about_the_shelter{
@@ -759,6 +766,25 @@ $black_light: #545454;
         .text_about_shelter{
             padding: 0px;
             order: -1;
+        }
+    }
+}
+
+@media screen and (max-width: 730px){
+    .not_only{
+        .right_side_section{
+            display: none;
+        }
+    }
+    // запилить тут бургер, пока так
+    .header{
+        flex-direction: column;
+        .navigation{
+            .list_of_navigation{
+                width: 100px;
+    
+                flex-direction: column;
+            }
         }
     }
 }
