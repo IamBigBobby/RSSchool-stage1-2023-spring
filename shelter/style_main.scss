@@ -753,9 +753,10 @@ $black_light: #545454;
         .things{
             display: flex;
             max-width: 700px;
-            height: 450px;
+            max-height: 620px;
             flex-wrap: wrap;
             justify-content: center;
+            margin-bottom: 30px;
 
             .thing{
                 width: 170px;
@@ -763,6 +764,9 @@ $black_light: #545454;
                 margin: 30px;
             }
         }
+    }
+    .donation{
+        flex-wrap: wrap;
     }
 }   
 
@@ -849,11 +853,23 @@ $black_light: #545454;
         .things{
             margin-top: 0px;
             row-gap: 0px;
-
-            .name_thing{
-                // margin-top: 30px;
-            }
         };
+    }
+    // donation
+    .background_donation{
+        .donation{
+            .donation_dog{
+                order: 1;
+                margin-top: 50px;
+            }
+            .information_about_donation{
+                padding-left: 12px;
+
+                p:nth-child(4){
+                    text-align: justify;
+                }
+            }
+        }
     }
 }
 
