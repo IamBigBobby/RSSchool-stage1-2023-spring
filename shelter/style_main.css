@@ -483,6 +483,15 @@ html {
     width: 569px;
     height: 593px;
     margin-top: 21px;
-    margin-left: 100px; } }
+    margin-left: 100px; }
+
+  .about_the_shelter {
+    padding-top: 65px;
+    justify-content: center; }
+    .about_the_shelter .img_about_pets {
+      padding-top: 95px; }
+    .about_the_shelter .text_about_shelter {
+      padding: 0px;
+      order: -1; } }
 
 /*# sourceMappingURL=style_main.css.map */

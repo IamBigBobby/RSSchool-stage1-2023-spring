@@ -747,5 +747,19 @@ $black_light: #545454;
         margin-top: 21px;
         margin-left: 100px;
     }
+    // about the shelter
+
+    .about_the_shelter{
+        padding-top: 65px;
+        justify-content: center;
+
+        .img_about_pets{
+            padding-top: 95px;
+        }
+        .text_about_shelter{
+            padding: 0px;
+            order: -1;
+        }
+    }
 }
 
