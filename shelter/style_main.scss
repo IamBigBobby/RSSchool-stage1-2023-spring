@@ -296,6 +296,7 @@ $black_light: #545454;
     }
     .pets_friends{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
 
@@ -335,6 +336,8 @@ $black_light: #545454;
         
         .our_friends_about{
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
 
             .card_friend{
 
@@ -717,6 +720,33 @@ $black_light: #545454;
         }
     }
 }
+@media screen and (max-width: 1290px) {
+    .about_the_shelter{
+        padding-top: 65px;
+        justify-content: center;
+
+        .img_about_pets{
+            padding-top: 95px;
+        }
+        .text_about_shelter{
+            padding: 0px;
+            order: -1;
+        }
+    }
+    .our_friends{
+        .pets_friends{
+            .our_friends_about{
+                .card_friend{
+                    margin-left: 13px;
+                    margin-right: 13px;
+                }
+                .card_friend:nth-child(3){
+                    display: none;
+                }
+            }
+        }
+    }   
+}
 
 @media screen and (max-width: 768px) {
     .wrapper{    
@@ -768,6 +798,44 @@ $black_light: #545454;
             order: -1;
         }
     }
+
+    // our friends
+    .our_friends{
+        h2{
+        padding-top: 120px;
+    }
+        .pets_friends{
+            .circle{
+                width: 50px;
+                height: 50px;
+            }
+            .our_friends_about{
+                .card_friend{
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    .our_friends{
+        .pets_friends{
+            .circle{
+                width: 50px;
+                height: 50px;
+            }
+            .our_friends_about{
+                .card_friend{
+                    order: -1;
+                }
+                .card_friend:nth-child(2){
+                    display: none;
+                }
+            }
+        }
+    } 
 }
 
 @media screen and (max-width: 730px){
@@ -788,4 +856,6 @@ $black_light: #545454;
         }
     }
 }
+
+
 

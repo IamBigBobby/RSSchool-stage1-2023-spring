@@ -195,6 +195,7 @@ html {
     text-align: center; }
   .our_friends .pets_friends {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 60px; }
@@ -218,7 +219,9 @@ html {
     .our_friends .pets_friends .circle:hover {
       background-color: #FDDCC4; }
     .our_friends .pets_friends .our_friends_about {
-      display: flex; }
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
       .our_friends .pets_friends .our_friends_about .card_friend {
         display: flex;
         flex-direction: column;
@@ -462,6 +465,21 @@ html {
     .background_footer .footer_section .footer_doggy {
       display: block; }
 
+@media screen and (max-width: 1290px) {
+  .about_the_shelter {
+    padding-top: 65px;
+    justify-content: center; }
+    .about_the_shelter .img_about_pets {
+      padding-top: 95px; }
+    .about_the_shelter .text_about_shelter {
+      padding: 0px;
+      order: -1; }
+
+  .our_friends .pets_friends .our_friends_about .card_friend {
+    margin-left: 13px;
+    margin-right: 13px; }
+  .our_friends .pets_friends .our_friends_about .card_friend:nth-child(3) {
+    display: none; } }
 @media screen and (max-width: 768px) {
   .wrapper {
     max-width: 768px;
@@ -493,7 +511,24 @@ html {
       padding-top: 95px; }
     .about_the_shelter .text_about_shelter {
       padding: 0px;
-      order: -1; } }
+      order: -1; }
+
+  .our_friends h2 {
+    padding-top: 120px; }
+  .our_friends .pets_friends .circle {
+    width: 50px;
+    height: 50px; }
+  .our_friends .pets_friends .our_friends_about .card_friend {
+    margin-left: 15px;
+    margin-right: 15px; } }
+@media screen and (max-width: 767px) {
+  .our_friends .pets_friends .circle {
+    width: 50px;
+    height: 50px; }
+  .our_friends .pets_friends .our_friends_about .card_friend {
+    order: -1; }
+  .our_friends .pets_friends .our_friends_about .card_friend:nth-child(2) {
+    display: none; } }
 @media screen and (max-width: 730px) {
   .not_only .right_side_section {
     display: none; }
