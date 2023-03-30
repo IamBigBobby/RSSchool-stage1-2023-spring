@@ -311,7 +311,7 @@ html {
     .things_for_help .things .thing:nth-child(8) {
       grid-column: 6 / 7; }
     .things_for_help .things .thing:nth-child(9) {
-      grid-column: 8 / 9; }
+      grid-column: 7 / 9; }
 
 .background_donation {
   background-color: #F6F6F6; }
@@ -462,8 +462,6 @@ html {
         color: #F1CDB3; }
         .background_footer .footer_section .address .london_address a p {
           padding-left: 20px; }
-    .background_footer .footer_section .footer_doggy {
-      display: block; }
 
 @media screen and (max-width: 1290px) {
   .about_the_shelter {
@@ -497,7 +495,31 @@ html {
         margin: 30px; }
 
   .donation {
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+
+  .footer .background_footer {
+    height: auto; }
+    .footer .background_footer .footer_section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center; }
+      .footer .background_footer .footer_section .questions {
+        position: relative;
+        left: -3px;
+        grid-column: 1 / 3;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .address {
+        position: relative;
+        left: -7px;
+        grid-column: 3 / 5;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .footer_doggy {
+        position: relative;
+        left: 25px;
+        grid-column: 2 / 4; } }
 @media screen and (max-width: 768px) {
   .wrapper {
     max-width: 768px;
@@ -549,13 +571,19 @@ html {
     margin-top: 0px;
     row-gap: 0px; }
 
-  .background_donation .donation .donation_dog {
-    order: 1;
-    margin-top: 50px; }
-  .background_donation .donation .information_about_donation {
-    padding-left: 12px; }
-    .background_donation .donation .information_about_donation p:nth-child(4) {
-      text-align: justify; } }
+  .background_donation .donation {
+    padding-bottom: 100px; }
+    .background_donation .donation .donation_dog {
+      order: 1;
+      margin-top: 50px; }
+    .background_donation .donation .information_about_donation {
+      padding-left: 12px; }
+      .background_donation .donation .information_about_donation p:nth-child(4) {
+        text-align: justify; }
+
+  .footer .background_footer .wrapper {
+    padding-top: 12px;
+    padding-bottom: 0px; } }
 @media screen and (max-width: 767px) {
   .our_friends .pets_friends .circle {
     width: 50px;
