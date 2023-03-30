@@ -954,7 +954,52 @@ $black_light: #545454;
 }
 
 @media screen and (max-width: 320px){
+    .wrapper{
+        max-width: 320px;
+        padding: 30px 20px;
+    }
+    .background_header{
+        min-height: auto;
+        height: 822px;
+    }
+    .header{
+        align-items: center;
+    }
+    .not_only{
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        .left_side_section{
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            h1{
+                width: 200px;
+                height: 67px;
+                padding-top: 29px;
+                font-size: 25px;
+                text-align: center;
+                letter-spacing: 0.06em;
+            }
+            p{
+                font-size: 15px;
+                text-align: center;
+                line-height: 160%;
+            }
+            .dark_button{
+                margin-top: 20px;
+            }
+        }
+        .right_side_section{
+            display: block;
+            width: 260px;
+            height: 272px;
 
+            margin: 30px 0px 0px 0px;
+        }
+    }
 }
 
 
