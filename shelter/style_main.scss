@@ -932,17 +932,29 @@ $black_light: #545454;
             display: none;
         }
     }
-    // запилить тут бургер, пока так
     .header{
-        flex-direction: column;
         .navigation{
+            .burger_menu{
+                span{
+                    display: block;
+                    height: 2px;
+                    width: 30px;
+                    background-color: $grey;
+                }
+                span:nth-child(2){
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                }
+            }
             .list_of_navigation{
-                width: 100px;
-    
-                flex-direction: column;
+                display: none;
             }
         }
     }
+}
+
+@media screen and (max-width: 320px){
+
 }
 
 
