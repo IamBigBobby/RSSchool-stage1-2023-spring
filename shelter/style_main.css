@@ -604,6 +604,9 @@ html {
     margin-bottom: 8px; }
   .header .navigation .list_of_navigation {
     display: none; } }
+@media screen and (max-width: 410px) {
+  .about_the_shelter .img_about_pets {
+    padding-top: 250px; } }
 @media screen and (max-width: 320px) {
   .wrapper {
     max-width: 320px;
@@ -642,6 +645,20 @@ html {
       display: block;
       width: 260px;
       height: 272px;
-      margin: 30px 0px 0px 0px; } }
+      margin: 30px 0px 0px 0px; }
+
+  .about_the_shelter {
+    padding-left: 25px;
+    padding-right: 25px; }
+    .about_the_shelter .img_about_pets {
+      width: 260px;
+      height: 354px;
+      padding-top: 168px; }
+    .about_the_shelter .text_about_shelter h2 {
+      font-size: 25px;
+      text-align: center; }
+    .about_the_shelter .text_about_shelter p {
+      text-align: justify;
+      padding-top: 21px; } }
 
 /*# sourceMappingURL=style_main.css.map */
