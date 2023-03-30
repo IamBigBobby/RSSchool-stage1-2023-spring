@@ -594,10 +594,15 @@ html {
   .not_only .right_side_section {
     display: none; }
 
-  .header {
-    flex-direction: column; }
-    .header .navigation .list_of_navigation {
-      width: 100px;
-      flex-direction: column; } }
+  .header .navigation .burger_menu span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background-color: #F1CDB3; }
+  .header .navigation .burger_menu span:nth-child(2) {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .header .navigation .list_of_navigation {
+    display: none; } }
 
 /*# sourceMappingURL=style_main.css.map */
