@@ -485,7 +485,7 @@ html {
     .things_for_help .things {
       display: flex;
       max-width: 700px;
-      max-height: 620px;
+      min-height: 402px;
       flex-wrap: wrap;
       justify-content: center;
       margin-bottom: 30px; }
@@ -542,8 +542,11 @@ html {
       width: 569px;
       height: 593px;
       margin-top: 21px;
-      margin-left: 100px; }
-
+      margin-left: 100px; } }
+@media screen and (max-width: 768px) and (max-width: 767px) {
+  .our_friends .pets_friends .our_friends_about .card_friend:nth-child(2) {
+    display: none; } }
+@media screen and (max-width: 768px) {
   .about_the_shelter {
     padding-top: 65px;
     justify-content: center; }
@@ -587,9 +590,7 @@ html {
 @media screen and (max-width: 783px) {
   .our_friends .pets_friends .circle {
     width: 50px;
-    height: 50px; }
-  .our_friends .pets_friends .our_friends_about .card_friend:nth-child(2) {
-    display: none; } }
+    height: 50px; } }
 @media screen and (max-width: 730px) {
   .not_only .right_side_section {
     display: none; }
@@ -603,6 +604,9 @@ html {
     margin-top: 8px;
     margin-bottom: 8px; }
   .header .navigation .list_of_navigation {
+    display: none; }
+
+  .background_donation .donation .donation_dog {
     display: none; } }
 @media screen and (max-width: 410px) {
   .about_the_shelter .img_about_pets {
@@ -709,19 +713,22 @@ html {
       margin-bottom: 40px; }
     .things_for_help .things {
       justify-content: flex-start;
-      justify-content: space-between; }
+      justify-content: space-between;
+      row-gap: 30px; }
       .things_for_help .things .thing {
         width: 130px;
         height: 87px;
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-right: 0px; }
+        margin: 0; }
         .things_for_help .things .thing .icon_thing {
           width: 50px;
           height: 50px; }
         .things_for_help .things .thing .name_thing {
           font-size: 15px;
           letter-spacing: 0.06em;
-          margin-top: 20px; } }
+          margin-top: 20px; }
+
+  .background_donation .donation .donation_dog {
+    width: 260px;
+    height: 135px; } }
 
 /*# sourceMappingURL=style_main.css.map */
