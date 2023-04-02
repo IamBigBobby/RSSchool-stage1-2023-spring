@@ -49,7 +49,7 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0px 40px;
-  width: 1280px; }
+  max-width: 1280px; }
 
 .header {
   display: flex;
@@ -270,5 +270,48 @@ html {
           padding-left: 20px; }
     .background_footer .footer_section .footer_doggy {
       display: block; }
+
+@media screen and (max-width: 1290px) {
+  .main .friends_looking_for .collection_of_pets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; } }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 30px 30px; }
+
+  .background_header {
+    height: 1165px; }
+
+  .header {
+    flex-wrap: wrap; }
+    .header .navigation .list_of_navigation {
+      display: flex; }
+
+  .main .friends_looking_for h1 {
+    padding-top: 51px;
+    padding-bottom: 9px; }
+  .main .friends_looking_for .collection_of_pets {
+    column-gap: 40px; }
+    .main .friends_looking_for .collection_of_pets .pet:nth-child(7) {
+      display: none; }
+    .main .friends_looking_for .collection_of_pets .pet:nth-child(8) {
+      display: none; }
+  .main .status_bar {
+    margin-top: 37px;
+    margin-bottom: 44px; } }
+@media screen and (max-width: 730px) {
+  .header .navigation .burger_menu span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background-color: #F1CDB3; }
+  .header .navigation .burger_menu span:nth-child(2) {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .header .navigation .list_of_navigation {
+    display: none; } }
 
 /*# sourceMappingURL=style_pets.css.map */
