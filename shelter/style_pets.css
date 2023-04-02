@@ -244,6 +244,10 @@ html {
         line-height: 130%;
         letter-spacing: 0.06em;
         color: #FFFFFF; }
+        .background_footer .footer_section .address h3 br:nth-child(1) {
+          display: block; }
+        .background_footer .footer_section .address h3 br:nth-child(2) {
+          display: none; }
       .background_footer .footer_section .address .boston_address {
         padding-top: 10px; }
         .background_footer .footer_section .address .boston_address a {
@@ -299,7 +303,8 @@ html {
         align-self: start; }
       .footer .background_footer .footer_section .footer_doggy {
         position: relative;
-        left: 25px;
+        left: 14px;
+        top: 5px;
         grid-column: 2 / 4; } }
 @media screen and (max-width: 768px) {
   .wrapper {

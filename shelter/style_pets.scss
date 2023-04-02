@@ -371,6 +371,13 @@ $black_light: #545454;
                 letter-spacing: 0.06em;
 
                 color:#FFFFFF;
+
+                br:nth-child(1){
+                    display: block;
+                }
+                br:nth-child(2){
+                    display: none;
+                }
             }
 
             .boston_address{
@@ -460,7 +467,8 @@ $black_light: #545454;
                 }
                 .footer_doggy{
                     position: relative;
-                    left: 25px;
+                    left: 14px;
+                    top: 5px;
                     grid-column: 2 / 4;
                 }
             }
