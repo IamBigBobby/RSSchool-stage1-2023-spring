@@ -550,8 +550,8 @@ $black_light: #545454;
                 padding-left: 15px;
                 padding-right: 15px;
 
-                width: 349px;
-                height: 43px;
+                max-width: 349px;
+                min-height: 43px;
                 border-radius: 9px;
 
                 background-color: $grey;
@@ -574,7 +574,7 @@ $black_light: #545454;
 // footer
 
 .background_footer{
-    height: 350px;
+    height: auto;
   
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 
@@ -668,6 +668,13 @@ $black_light: #545454;
                 letter-spacing: 0.06em;
 
                 color:#FFFFFF;
+
+                br:nth-child(1){
+                    display: block;
+                }
+                br:nth-child(2){
+                    display: none;
+                }
             }
 
             .boston_address{
@@ -766,7 +773,7 @@ $black_light: #545454;
     }
     .footer{
         .background_footer{
-            height: auto;
+            height: 667px;
             .footer_section{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -832,6 +839,11 @@ $black_light: #545454;
     
             margin-top: 21px;
             margin-left: 100px;
+        }
+    }
+    .footer{
+        .background_footer{
+            height: 641px;
         }
     }
 
@@ -960,8 +972,26 @@ $black_light: #545454;
     }
     .background_donation{
         .donation{
+            padding-left: 50px;
+            padding-right: 50px;
             .donation_dog{
                 display: none;
+            }
+        }
+    }
+    .footer{
+        .background_footer{
+            .footer_section{
+                padding-left: 10px;
+                padding-right: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .footer_doggy{
+                    display: none;
+                }
             }
         }
     }
@@ -1120,9 +1150,94 @@ $black_light: #545454;
     }
     .background_donation{
         .donation{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 13px;
+            padding-bottom: 42px;
             .donation_dog{
+                display: block;
+                margin-top: 43px;
                 width: 260px;
                 height: 135px;
+            }
+            .information_about_donation{
+                padding: 0;
+                h2{
+                    font-size: 25px;
+                    text-align: center;
+                }
+                p:nth-child(2){
+                    padding-top: 24px;
+                    letter-spacing: 0.01em;
+                }
+                .bank_account{
+                    margin-top: 24px;
+                    .number_of_card{
+                        font-size: 15px;
+                    }
+                }
+                p:nth-child(4){
+                    padding-top: 6px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    .footer{
+        .background_footer{
+            height: 816px;
+            .footer_section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                .questions{
+                    align-self: center;
+                    left: 0px;
+                    h3{
+                        font-size: 25px;
+                        text-align: center;
+                        br{
+                            display: none;
+                        }
+                    }
+                    .mail{
+                        padding-left: 13px;
+                    }
+                    .phone{
+                        padding-left: 20px;
+                    }
+                }
+                .address{
+                    padding-top: 12px;
+                    align-self: center;
+                    left: 0px;
+                    h3{
+                        font-size: 25px;
+                        text-align: center;
+                        br:nth-child(1){
+                            display: none;
+                        }
+                        br:nth-child(2){
+                            display: block;
+                        }
+                    }
+                    .boston_address{
+                        padding-top: 21px;
+                    }
+                }
+                .footer_doggy{
+                    display: block;
+                    left: 0px;
+                    img{
+                        padding-top: 31px;
+                        display: block;
+                        width: 260px;
+                        height: 269px;
+                    }
+                }
             }
         }
     }
