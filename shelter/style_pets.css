@@ -276,7 +276,31 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+
+  .footer .background_footer {
+    height: 667px; }
+    .footer .background_footer .footer_section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center; }
+      .footer .background_footer .footer_section .questions {
+        position: relative;
+        left: -3px;
+        grid-column: 1 / 3;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .address {
+        position: relative;
+        left: -7px;
+        grid-column: 3 / 5;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .footer_doggy {
+        position: relative;
+        left: 25px;
+        grid-column: 2 / 4; } }
 @media screen and (max-width: 768px) {
   .wrapper {
     max-width: 768px;
@@ -301,7 +325,13 @@ html {
       display: none; }
   .main .status_bar {
     margin-top: 37px;
-    margin-bottom: 44px; } }
+    margin-bottom: 44px; }
+
+  .footer .background_footer {
+    height: 641px; }
+    .footer .background_footer .wrapper {
+      padding-top: 12px;
+      padding-bottom: 0px; } }
 @media screen and (max-width: 730px) {
   .header .navigation .burger_menu span {
     display: block;
@@ -312,6 +342,33 @@ html {
     margin-top: 8px;
     margin-bottom: 8px; }
   .header .navigation .list_of_navigation {
-    display: none; } }
+    display: none; }
+
+  .main .friends_looking_for {
+    padding-right: 10px;
+    padding-left: 10px; }
+  .main .status_bar {
+    width: 300px; }
+
+  .footer .background_footer .footer_section {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .footer .background_footer .footer_section .footer_doggy {
+      display: none; } }
+@media screen and (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+    padding: 30px 20px; }
+
+  .background_header {
+    min-height: auto;
+    height: 822px; }
+
+  .header {
+    align-items: center; } }
 
 /*# sourceMappingURL=style_pets.css.map */

@@ -435,6 +435,37 @@ $black_light: #545454;
             }
         }
     }
+    .footer{
+        .background_footer{
+            height: 667px;
+            .footer_section{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                justify-content: center;
+
+                .questions{
+                    position: relative;
+                    left: -3px;
+                    grid-column: 1 / 3;
+                    justify-self: center;
+                    align-self: start;
+                }
+                .address{
+                    position: relative;
+                    left: -7px;
+                    grid-column: 3 / 5;
+                    justify-self: center;
+                    align-self: start;
+                }
+                .footer_doggy{
+                    position: relative;
+                    left: 25px;
+                    grid-column: 2 / 4;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 768px){
     .wrapper{
@@ -477,6 +508,16 @@ $black_light: #545454;
             margin-bottom: 44px;
         }
     }
+    // footer
+    .footer{
+        .background_footer{
+            height: 641px;
+            .wrapper{
+                padding-top: 12px;
+                padding-bottom: 0px; 
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 730px){
@@ -498,5 +539,44 @@ $black_light: #545454;
                 display: none;
             }
         }
+    }
+    .main{
+        .friends_looking_for{
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        .status_bar{
+            width: 300px;
+        }
+    }
+    .footer{
+        .background_footer{
+            .footer_section{
+                padding-left: 10px;
+                padding-right: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .footer_doggy{
+                    display: none;
+                }
+            }
+        }
     }    
+}
+
+@media screen and (max-width: 320px){
+    .wrapper{
+        max-width: 320px;
+        padding: 30px 20px;
+    }
+    .background_header{
+        min-height: auto;
+        height: 822px;
+    }
+    .header{
+        align-items: center;
+    }
 }
