@@ -528,7 +528,7 @@ $black_light: #545454;
                     display: block;
                     height: 2px;
                     width: 30px;
-                    background-color: $grey;
+                    background-color: $black;
                 }
                 span:nth-child(2){
                     margin-top: 8px;
@@ -578,5 +578,28 @@ $black_light: #545454;
     }
     .header{
         align-items: center;
+    }
+    .main{
+        .friends_looking_for{
+            h1{
+                font-size: 25px;
+                padding-top: 12px;
+                padding-bottom: 23px;
+            }
+            .collection_of_pets{
+                .pet:nth-child(4){
+                    display: none;
+                }
+                .pet:nth-child(5){
+                    display: none;
+                }
+                .pet:nth-child(6){
+                    display: none;
+                }
+            }
+        }
+        .status_bar{
+            margin-bottom: 12px;
+        }
     }
 }

@@ -337,7 +337,7 @@ html {
     display: block;
     height: 2px;
     width: 30px;
-    background-color: #F1CDB3; }
+    background-color: #292929; }
   .header .navigation .burger_menu span:nth-child(2) {
     margin-top: 8px;
     margin-bottom: 8px; }
@@ -369,6 +369,19 @@ html {
     height: 822px; }
 
   .header {
-    align-items: center; } }
+    align-items: center; }
+
+  .main .friends_looking_for h1 {
+    font-size: 25px;
+    padding-top: 12px;
+    padding-bottom: 23px; }
+  .main .friends_looking_for .collection_of_pets .pet:nth-child(4) {
+    display: none; }
+  .main .friends_looking_for .collection_of_pets .pet:nth-child(5) {
+    display: none; }
+  .main .friends_looking_for .collection_of_pets .pet:nth-child(6) {
+    display: none; }
+  .main .status_bar {
+    margin-bottom: 12px; } }
 
 /*# sourceMappingURL=style_pets.css.map */
