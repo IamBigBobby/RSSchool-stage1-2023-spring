@@ -602,4 +602,62 @@ $black_light: #545454;
             margin-bottom: 12px;
         }
     }
+    .footer{
+        .background_footer{
+            height: 816px;
+            .footer_section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                .questions{
+                    align-self: center;
+                    left: 0px;
+                    h3{
+                        font-size: 25px;
+                        text-align: center;
+                        br{
+                            display: none;
+                        }
+                    }
+                    .mail{
+                        padding-left: 13px;
+                    }
+                    .phone{
+                        padding-left: 20px;
+                    }
+                }
+                .address{
+                    padding-top: 12px;
+                    align-self: center;
+                    left: 0px;
+                    h3{
+                        font-size: 25px;
+                        text-align: center;
+                        br:nth-child(1){
+                            display: none;
+                        }
+                        br:nth-child(2){
+                            display: block;
+                        }
+                    }
+                    .boston_address{
+                        padding-top: 21px;
+                    }
+                }
+                .footer_doggy{
+                    display: block;
+                    left: 0px;
+                    img{
+                        padding-top: 31px;
+                        display: block;
+                        width: 260px;
+                        height: 269px;
+                    }
+                }
+            }
+        }
+    }
 }

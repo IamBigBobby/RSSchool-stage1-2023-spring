@@ -382,6 +382,48 @@ html {
   .main .friends_looking_for .collection_of_pets .pet:nth-child(6) {
     display: none; }
   .main .status_bar {
-    margin-bottom: 12px; } }
+    margin-bottom: 12px; }
+
+  .footer .background_footer {
+    height: 816px; }
+    .footer .background_footer .footer_section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .footer .background_footer .footer_section .questions {
+        align-self: center;
+        left: 0px; }
+        .footer .background_footer .footer_section .questions h3 {
+          font-size: 25px;
+          text-align: center; }
+          .footer .background_footer .footer_section .questions h3 br {
+            display: none; }
+        .footer .background_footer .footer_section .questions .mail {
+          padding-left: 13px; }
+        .footer .background_footer .footer_section .questions .phone {
+          padding-left: 20px; }
+      .footer .background_footer .footer_section .address {
+        padding-top: 12px;
+        align-self: center;
+        left: 0px; }
+        .footer .background_footer .footer_section .address h3 {
+          font-size: 25px;
+          text-align: center; }
+          .footer .background_footer .footer_section .address h3 br:nth-child(1) {
+            display: none; }
+          .footer .background_footer .footer_section .address h3 br:nth-child(2) {
+            display: block; }
+        .footer .background_footer .footer_section .address .boston_address {
+          padding-top: 21px; }
+      .footer .background_footer .footer_section .footer_doggy {
+        display: block;
+        left: 0px; }
+        .footer .background_footer .footer_section .footer_doggy img {
+          padding-top: 31px;
+          display: block;
+          width: 260px;
+          height: 269px; } }
 
 /*# sourceMappingURL=style_pets.css.map */
