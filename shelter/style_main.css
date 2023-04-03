@@ -55,10 +55,10 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0px 40px;
-  width: 1280px; }
+  max-width: 1280px; }
 
 .background_header {
-  height: 908px;
+  min-height: 908px;
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); }
 
 .header {
@@ -94,15 +94,17 @@ html {
   justify-content: space-between;
   width: 443px;
   list-style-type: none; }
-  .navigation .list_of_navigation .elemet_of_navigation a {
-    padding-bottom: 3px;
-    font-family: Arial;
-    font-size: 15px;
-    font-weight: 400;
-    color: #FAFAFA;
-    text-decoration-line: none; }
-  .navigation .list_of_navigation .elemet_of_navigation a:hover {
-    border-bottom: 3px solid #F1CDB3; }
+  .navigation .list_of_navigation .elemet_of_navigation {
+    display: block; }
+    .navigation .list_of_navigation .elemet_of_navigation a {
+      padding-bottom: 3px;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: 400;
+      color: #FAFAFA;
+      text-decoration-line: none; }
+    .navigation .list_of_navigation .elemet_of_navigation a:hover {
+      border-bottom: 3px solid #F1CDB3; }
   .navigation .list_of_navigation .active_link a {
     padding-bottom: 3px;
     font-family: Arial;
@@ -114,15 +116,16 @@ html {
 
 .not_only {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding-top: 60px; }
   .not_only .left_side_section {
     display: flex;
     flex-direction: column;
-    width: 460px;
+    max-width: 460px;
     height: 400px; }
     .not_only .left_side_section h1 {
-      width: 310px;
+      max-width: 310px;
       height: 114px;
       margin: 0;
       font-family: Georgia;
@@ -131,7 +134,7 @@ html {
       line-height: 130%;
       color: #FFFFFF; }
     .not_only .left_side_section p {
-      width: 460px;
+      max-width: 460px;
       height: 72px;
       padding-top: 25px;
       padding-bottom: 30px;
@@ -147,12 +150,13 @@ html {
 
 .about_the_shelter {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 80px;
   padding-left: 215px;
   padding-right: 215px;
   padding-bottom: 100px; }
   .about_the_shelter .text_about_shelter {
-    width: 430px;
+    max-width: 430px;
     height: 380px;
     padding-left: 120px; }
     .about_the_shelter .text_about_shelter h2 {
@@ -191,6 +195,7 @@ html {
     text-align: center; }
   .our_friends .pets_friends {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 60px; }
@@ -214,7 +219,9 @@ html {
     .our_friends .pets_friends .circle:hover {
       background-color: #FDDCC4; }
     .our_friends .pets_friends .our_friends_about {
-      display: flex; }
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
       .our_friends .pets_friends .our_friends_about .card_friend {
         display: flex;
         flex-direction: column;
@@ -304,7 +311,7 @@ html {
     .things_for_help .things .thing:nth-child(8) {
       grid-column: 6 / 7; }
     .things_for_help .things .thing:nth-child(9) {
-      grid-column: 8 / 9; }
+      grid-column: 7 / 9; }
 
 .background_donation {
   background-color: #F6F6F6; }
@@ -359,8 +366,8 @@ html {
         margin-top: 20px;
         padding-left: 15px;
         padding-right: 15px;
-        width: 349px;
-        height: 43px;
+        max-width: 349px;
+        min-height: 43px;
         border-radius: 9px;
         background-color: #F1CDB3; }
         .background_donation .donation .information_about_donation .bank_account .number_of_card {
@@ -372,7 +379,7 @@ html {
           color: #545454; }
 
 .background_footer {
-  height: 350px;
+  height: auto;
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); }
   .background_footer .footer_section {
     display: flex;
@@ -431,6 +438,10 @@ html {
         line-height: 130%;
         letter-spacing: 0.06em;
         color: #FFFFFF; }
+        .background_footer .footer_section .address h3 br:nth-child(1) {
+          display: block; }
+        .background_footer .footer_section .address h3 br:nth-child(2) {
+          display: none; }
       .background_footer .footer_section .address .boston_address {
         padding-top: 10px; }
         .background_footer .footer_section .address .boston_address a {
@@ -455,7 +466,353 @@ html {
         color: #F1CDB3; }
         .background_footer .footer_section .address .london_address a p {
           padding-left: 20px; }
-    .background_footer .footer_section .footer_doggy {
-      display: block; }
+
+@media screen and (max-width: 1290px) {
+  .about_the_shelter {
+    padding-top: 65px;
+    justify-content: center; }
+    .about_the_shelter .img_about_pets {
+      padding-top: 95px; }
+    .about_the_shelter .text_about_shelter {
+      padding: 0px;
+      order: -1; }
+
+  .our_friends .pets_friends .our_friends_about .card_friend {
+    margin-left: 13px;
+    margin-right: 13px; }
+  .our_friends .pets_friends .our_friends_about .card_friend:nth-child(3) {
+    display: none; }
+
+  .things_for_help {
+    padding-left: 0px;
+    padding-right: 0px; }
+    .things_for_help .things {
+      display: flex;
+      max-width: 700px;
+      min-height: 402px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px; }
+      .things_for_help .things .thing {
+        width: 170px;
+        height: 113px;
+        margin: 30px; }
+
+  .donation {
+    flex-wrap: wrap; }
+
+  .footer .background_footer {
+    height: 667px; }
+    .footer .background_footer .footer_section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center; }
+      .footer .background_footer .footer_section .questions {
+        position: relative;
+        left: -3px;
+        grid-column: 1 / 3;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .address {
+        position: relative;
+        left: -7px;
+        grid-column: 3 / 5;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .footer_doggy {
+        position: relative;
+        left: 25px;
+        grid-column: 2 / 4; } }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 30px 30px; }
+
+  .background_header {
+    height: 1165px; }
+
+  .header {
+    flex-wrap: wrap; }
+    .header .navigation .list_of_navigation {
+      display: flex; }
+
+  .not_only {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .not_only .left_side_section .dark_button {
+      align-self: center; }
+    .not_only .right_side_section {
+      width: 569px;
+      height: 593px;
+      margin-top: 21px;
+      margin-left: 100px; }
+
+  .footer .background_footer {
+    height: 641px; } }
+@media screen and (max-width: 768px) and (max-width: 767px) {
+  .our_friends .pets_friends .our_friends_about .card_friend:nth-child(2) {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .about_the_shelter {
+    padding-top: 65px;
+    justify-content: center; }
+    .about_the_shelter .img_about_pets {
+      padding-top: 95px; }
+    .about_the_shelter .text_about_shelter {
+      padding: 0px;
+      order: -1; }
+
+  .our_friends {
+    padding-left: 0px;
+    padding-right: 0px; }
+    .our_friends h2 {
+      padding-top: 120px; }
+    .our_friends .pets_friends .circle {
+      width: 50px;
+      height: 50px; }
+    .our_friends .pets_friends .our_friends_about .card_friend {
+      margin-left: 15px;
+      margin-right: 15px; }
+
+  .things_for_help h2 {
+    margin-top: 19px; }
+  .things_for_help .things {
+    margin-top: 0px;
+    row-gap: 0px; }
+
+  .background_donation .donation {
+    padding-bottom: 100px; }
+    .background_donation .donation .donation_dog {
+      order: 1;
+      margin-top: 50px; }
+    .background_donation .donation .information_about_donation {
+      padding-left: 12px; }
+      .background_donation .donation .information_about_donation p:nth-child(4) {
+        text-align: justify; }
+
+  .footer .background_footer .wrapper {
+    padding-top: 12px;
+    padding-bottom: 0px; } }
+@media screen and (max-width: 783px) {
+  .our_friends .pets_friends .circle {
+    width: 50px;
+    height: 50px; } }
+@media screen and (max-width: 730px) {
+  .not_only .right_side_section {
+    display: none; }
+
+  .header .navigation .burger_menu span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background-color: #F1CDB3; }
+  .header .navigation .burger_menu span:nth-child(2) {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .header .navigation .list_of_navigation {
+    display: none; }
+
+  .background_donation .donation {
+    padding-left: 50px;
+    padding-right: 50px; }
+    .background_donation .donation .donation_dog {
+      display: none; }
+
+  .footer .background_footer .footer_section {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .footer .background_footer .footer_section .footer_doggy {
+      display: none; } }
+@media screen and (max-width: 410px) {
+  .about_the_shelter .img_about_pets {
+    padding-top: 250px; }
+
+  .our_friends .pets_friends {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 435px 100px; }
+    .our_friends .pets_friends .our_friends_about {
+      grid-column: 1 / 3; }
+    .our_friends .pets_friends .circle:nth-child(1) {
+      position: relative;
+      right: 39px;
+      bottom: 5px;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      justify-self: end;
+      align-self: center; }
+    .our_friends .pets_friends .circle:nth-child(3) {
+      position: relative;
+      left: 39px;
+      bottom: 5px;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: start;
+      align-self: center; } }
+@media screen and (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+    padding: 30px 20px; }
+
+  .background_header {
+    min-height: auto;
+    height: 822px; }
+
+  .header {
+    align-items: center; }
+
+  .not_only {
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px; }
+    .not_only .left_side_section {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .not_only .left_side_section h1 {
+        width: 200px;
+        height: 67px;
+        padding-top: 29px;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.06em; }
+      .not_only .left_side_section p {
+        font-size: 15px;
+        text-align: center;
+        line-height: 160%; }
+      .not_only .left_side_section .dark_button {
+        margin-top: 20px; }
+    .not_only .right_side_section {
+      display: block;
+      width: 260px;
+      height: 272px;
+      margin: 30px 0px 0px 0px; }
+
+  .about_the_shelter {
+    padding-left: 25px;
+    padding-right: 25px; }
+    .about_the_shelter .img_about_pets {
+      width: 260px;
+      height: 354px;
+      padding-top: 168px; }
+    .about_the_shelter .text_about_shelter h2 {
+      font-size: 25px;
+      text-align: center; }
+    .about_the_shelter .text_about_shelter p {
+      text-align: justify;
+      padding-top: 21px; }
+
+  .our_friends {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .our_friends h2 {
+      padding-top: 56px;
+      font-size: 25px;
+      text-align: center;
+      letter-spacing: 0.06em; }
+    .our_friends .pets_friends {
+      margin-top: 41px; }
+    .our_friends .dark_button {
+      margin-top: 13px;
+      margin-bottom: 40px; }
+
+  .things_for_help {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .things_for_help h2 {
+      font-size: 25px;
+      margin-top: 15px;
+      margin-bottom: 40px; }
+    .things_for_help .things {
+      justify-content: flex-start;
+      justify-content: space-between;
+      row-gap: 30px; }
+      .things_for_help .things .thing {
+        width: 130px;
+        height: 87px;
+        margin: 0; }
+        .things_for_help .things .thing .icon_thing {
+          width: 50px;
+          height: 50px; }
+        .things_for_help .things .thing .name_thing {
+          font-size: 15px;
+          letter-spacing: 0.06em;
+          margin-top: 20px; }
+
+  .background_donation .donation {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 13px;
+    padding-bottom: 42px; }
+    .background_donation .donation .donation_dog {
+      display: block;
+      margin-top: 43px;
+      width: 260px;
+      height: 135px; }
+    .background_donation .donation .information_about_donation {
+      padding: 0; }
+      .background_donation .donation .information_about_donation h2 {
+        font-size: 25px;
+        text-align: center; }
+      .background_donation .donation .information_about_donation p:nth-child(2) {
+        padding-top: 24px;
+        letter-spacing: 0.01em; }
+      .background_donation .donation .information_about_donation .bank_account {
+        margin-top: 24px; }
+        .background_donation .donation .information_about_donation .bank_account .number_of_card {
+          font-size: 15px; }
+      .background_donation .donation .information_about_donation p:nth-child(4) {
+        padding-top: 6px;
+        margin-bottom: 0px; }
+
+  .footer .background_footer {
+    height: 816px; }
+    .footer .background_footer .footer_section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .footer .background_footer .footer_section .questions {
+        align-self: center;
+        left: 0px; }
+        .footer .background_footer .footer_section .questions h3 {
+          font-size: 25px;
+          text-align: center; }
+          .footer .background_footer .footer_section .questions h3 br {
+            display: none; }
+        .footer .background_footer .footer_section .questions .mail {
+          padding-left: 13px; }
+        .footer .background_footer .footer_section .questions .phone {
+          padding-left: 20px; }
+      .footer .background_footer .footer_section .address {
+        padding-top: 12px;
+        align-self: center;
+        left: 0px; }
+        .footer .background_footer .footer_section .address h3 {
+          font-size: 25px;
+          text-align: center; }
+          .footer .background_footer .footer_section .address h3 br:nth-child(1) {
+            display: none; }
+          .footer .background_footer .footer_section .address h3 br:nth-child(2) {
+            display: block; }
+        .footer .background_footer .footer_section .address .boston_address {
+          padding-top: 21px; }
+      .footer .background_footer .footer_section .footer_doggy {
+        display: block;
+        left: 0px; }
+        .footer .background_footer .footer_section .footer_doggy img {
+          padding-top: 31px;
+          display: block;
+          width: 260px;
+          height: 269px; } }
 
 /*# sourceMappingURL=style_main.css.map */

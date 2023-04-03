@@ -49,7 +49,7 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0px 40px;
-  width: 1280px; }
+  max-width: 1280px; }
 
 .header {
   display: flex;
@@ -244,6 +244,10 @@ html {
         line-height: 130%;
         letter-spacing: 0.06em;
         color: #FFFFFF; }
+        .background_footer .footer_section .address h3 br:nth-child(1) {
+          display: block; }
+        .background_footer .footer_section .address h3 br:nth-child(2) {
+          display: none; }
       .background_footer .footer_section .address .boston_address {
         padding-top: 10px; }
         .background_footer .footer_section .address .boston_address a {
@@ -270,5 +274,161 @@ html {
           padding-left: 20px; }
     .background_footer .footer_section .footer_doggy {
       display: block; }
+
+@media screen and (max-width: 1290px) {
+  .main .friends_looking_for .collection_of_pets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+
+  .footer .background_footer {
+    height: 667px; }
+    .footer .background_footer .footer_section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center; }
+      .footer .background_footer .footer_section .questions {
+        position: relative;
+        left: -3px;
+        grid-column: 1 / 3;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .address {
+        position: relative;
+        left: -7px;
+        grid-column: 3 / 5;
+        justify-self: center;
+        align-self: start; }
+      .footer .background_footer .footer_section .footer_doggy {
+        position: relative;
+        left: 14px;
+        top: 5px;
+        grid-column: 2 / 4; } }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 30px 30px; }
+
+  .background_header {
+    height: 1165px; }
+
+  .header {
+    flex-wrap: wrap; }
+    .header .navigation .list_of_navigation {
+      display: flex; }
+
+  .main .friends_looking_for h1 {
+    padding-top: 51px;
+    padding-bottom: 9px; }
+  .main .friends_looking_for .collection_of_pets {
+    column-gap: 40px; }
+    .main .friends_looking_for .collection_of_pets .pet:nth-child(7) {
+      display: none; }
+    .main .friends_looking_for .collection_of_pets .pet:nth-child(8) {
+      display: none; }
+  .main .status_bar {
+    margin-top: 37px;
+    margin-bottom: 44px; }
+
+  .footer .background_footer {
+    height: 641px; }
+    .footer .background_footer .wrapper {
+      padding-top: 12px;
+      padding-bottom: 0px; } }
+@media screen and (max-width: 730px) {
+  .header .navigation .burger_menu span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background-color: #292929; }
+  .header .navigation .burger_menu span:nth-child(2) {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .header .navigation .list_of_navigation {
+    display: none; }
+
+  .main .friends_looking_for {
+    padding-right: 10px;
+    padding-left: 10px; }
+  .main .status_bar {
+    width: 300px; }
+
+  .footer .background_footer .footer_section {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .footer .background_footer .footer_section .footer_doggy {
+      display: none; } }
+@media screen and (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+    padding: 30px 20px; }
+
+  .background_header {
+    min-height: auto;
+    height: 822px; }
+
+  .header {
+    align-items: center; }
+
+  .main .friends_looking_for h1 {
+    font-size: 25px;
+    padding-top: 12px;
+    padding-bottom: 23px; }
+  .main .friends_looking_for .collection_of_pets .pet:nth-child(4) {
+    display: none; }
+  .main .friends_looking_for .collection_of_pets .pet:nth-child(5) {
+    display: none; }
+  .main .friends_looking_for .collection_of_pets .pet:nth-child(6) {
+    display: none; }
+  .main .status_bar {
+    margin-bottom: 12px; }
+
+  .footer .background_footer {
+    height: 816px; }
+    .footer .background_footer .footer_section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .footer .background_footer .footer_section .questions {
+        align-self: center;
+        left: 0px; }
+        .footer .background_footer .footer_section .questions h3 {
+          font-size: 25px;
+          text-align: center; }
+          .footer .background_footer .footer_section .questions h3 br {
+            display: none; }
+        .footer .background_footer .footer_section .questions .mail {
+          padding-left: 13px; }
+        .footer .background_footer .footer_section .questions .phone {
+          padding-left: 20px; }
+      .footer .background_footer .footer_section .address {
+        padding-top: 12px;
+        align-self: center;
+        left: 0px; }
+        .footer .background_footer .footer_section .address h3 {
+          font-size: 25px;
+          text-align: center; }
+          .footer .background_footer .footer_section .address h3 br:nth-child(1) {
+            display: none; }
+          .footer .background_footer .footer_section .address h3 br:nth-child(2) {
+            display: block; }
+        .footer .background_footer .footer_section .address .boston_address {
+          padding-top: 21px; }
+      .footer .background_footer .footer_section .footer_doggy {
+        display: block;
+        left: 0px; }
+        .footer .background_footer .footer_section .footer_doggy img {
+          padding-top: 31px;
+          display: block;
+          width: 260px;
+          height: 269px; } }
 
 /*# sourceMappingURL=style_pets.css.map */
