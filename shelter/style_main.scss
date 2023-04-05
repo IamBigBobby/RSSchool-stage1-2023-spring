@@ -814,6 +814,7 @@ $black_light: #545454;
     // header
     .background_header{
         height: 1165px;
+        overflow: hidden;
     }
     .header{
         flex-wrap: wrap;
@@ -952,8 +953,29 @@ $black_light: #545454;
         }
     }
     .header{
+        position: relative;
         .navigation{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
             .burger_menu{
+                z-index: 1000;
+                transition: 1s;
+                span{
+                    display: block;
+                    height: 2px;
+                    width: 30px;
+                    background-color: $grey;
+                }
+                span:nth-child(2){
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                }
+            }
+            .burger_menu_rotate{
+                z-index: 1000;
+                transform: rotate(90deg);
+                transition: 1s;
                 span{
                     display: block;
                     height: 2px;
@@ -966,8 +988,130 @@ $black_light: #545454;
                 }
             }
             .list_of_navigation{
-                display: none;
+
+                z-index: 500;
+                background-color: $black;
+                position: absolute;
+                right: -380px;
+                top: -17px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 320px;
+                height: 823px;
+                padding-left: 30px;
+                padding-right: 30px;
+                row-gap: 40px;
+                list-style-type: none;
+
+                transition: 1s;
+
+                .elemet_of_navigation{
+                    display: block;
+                    a{
+                        padding-bottom: 3px;
+        
+                        font-family: $Arial;
+                        font-size: 32px;
+                        font-weight: 400;
+        
+                        color: #FAFAFA;
+                        text-decoration-line: none;
+                    }
+                    a:hover{
+                        border-bottom: 3px solid $grey;
+                    }
+                }
+                .active_link{
+                    a{
+                        padding-bottom: 3px;
+        
+                        font-family: $Arial;
+                        font-size: 32px;
+                        font-weight: 400;
+        
+                        color: #FAFAFA;
+                        text-decoration-line: none;
+        
+                        border-bottom: 3px solid $grey;
+                    }   
+                }
             }
+            .list_of_navigation_show{
+                z-index: 500;
+                background-color: $black;
+                position: absolute;
+                right: -30px;
+                top: -17px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 320px;
+                height: 823px;
+                padding-left: 30px;
+                padding-right: 30px;
+                row-gap: 40px;
+                list-style-type: none;
+
+                transition: 1s;
+
+                .elemet_of_navigation{
+                    display: block;
+                    a{
+                        padding-bottom: 3px;
+        
+                        font-family: $Arial;
+                        font-size: 32px;
+                        font-weight: 400;
+        
+                        color: #FAFAFA;
+                        text-decoration-line: none;
+                    }
+                    a:hover{
+                        border-bottom: 3px solid $grey;
+                    }
+                }
+                .active_link{
+                    a{
+                        padding-bottom: 3px;
+        
+                        font-family: $Arial;
+                        font-size: 32px;
+                        font-weight: 400;
+        
+                        color: #FAFAFA;
+                        text-decoration-line: none;
+        
+                        border-bottom: 3px solid $grey;
+                    }   
+                }
+            }
+        }
+        .transparent_background_none{
+            display: none;
+            z-index: 1;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100vw; 
+            height: 100vh;
+            background-color: black;
+            opacity: 1;
+            transition: 1s;
+        }
+        .transparent_background_show{
+            display: block;
+            z-index: 1;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100vw; 
+            height: 100vh;
+            background-color: black;
+            opacity: 0.6;
+            transition: 1s;
         }
     }
     .background_donation{

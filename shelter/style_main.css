@@ -530,7 +530,8 @@ html {
     padding: 30px 30px; }
 
   .background_header {
-    height: 1165px; }
+    height: 1165px;
+    overflow: hidden; }
 
   .header {
     flex-wrap: wrap; }
@@ -602,16 +603,129 @@ html {
   .not_only .right_side_section {
     display: none; }
 
-  .header .navigation .burger_menu span {
-    display: block;
-    height: 2px;
-    width: 30px;
-    background-color: #F1CDB3; }
-  .header .navigation .burger_menu span:nth-child(2) {
-    margin-top: 8px;
-    margin-bottom: 8px; }
-  .header .navigation .list_of_navigation {
-    display: none; }
+  .header {
+    position: relative; }
+    .header .navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+      .header .navigation .burger_menu {
+        z-index: 1000;
+        transition: 1s; }
+        .header .navigation .burger_menu span {
+          display: block;
+          height: 2px;
+          width: 30px;
+          background-color: #F1CDB3; }
+        .header .navigation .burger_menu span:nth-child(2) {
+          margin-top: 8px;
+          margin-bottom: 8px; }
+      .header .navigation .burger_menu_rotate {
+        z-index: 1000;
+        transform: rotate(90deg);
+        transition: 1s; }
+        .header .navigation .burger_menu_rotate span {
+          display: block;
+          height: 2px;
+          width: 30px;
+          background-color: #F1CDB3; }
+        .header .navigation .burger_menu_rotate span:nth-child(2) {
+          margin-top: 8px;
+          margin-bottom: 8px; }
+      .header .navigation .list_of_navigation {
+        z-index: 500;
+        background-color: #292929;
+        position: absolute;
+        right: -380px;
+        top: -17px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        height: 823px;
+        padding-left: 30px;
+        padding-right: 30px;
+        row-gap: 40px;
+        list-style-type: none;
+        transition: 1s; }
+        .header .navigation .list_of_navigation .elemet_of_navigation {
+          display: block; }
+          .header .navigation .list_of_navigation .elemet_of_navigation a {
+            padding-bottom: 3px;
+            font-family: Arial;
+            font-size: 32px;
+            font-weight: 400;
+            color: #FAFAFA;
+            text-decoration-line: none; }
+          .header .navigation .list_of_navigation .elemet_of_navigation a:hover {
+            border-bottom: 3px solid #F1CDB3; }
+        .header .navigation .list_of_navigation .active_link a {
+          padding-bottom: 3px;
+          font-family: Arial;
+          font-size: 32px;
+          font-weight: 400;
+          color: #FAFAFA;
+          text-decoration-line: none;
+          border-bottom: 3px solid #F1CDB3; }
+      .header .navigation .list_of_navigation_show {
+        z-index: 500;
+        background-color: #292929;
+        position: absolute;
+        right: -30px;
+        top: -17px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        height: 823px;
+        padding-left: 30px;
+        padding-right: 30px;
+        row-gap: 40px;
+        list-style-type: none;
+        transition: 1s; }
+        .header .navigation .list_of_navigation_show .elemet_of_navigation {
+          display: block; }
+          .header .navigation .list_of_navigation_show .elemet_of_navigation a {
+            padding-bottom: 3px;
+            font-family: Arial;
+            font-size: 32px;
+            font-weight: 400;
+            color: #FAFAFA;
+            text-decoration-line: none; }
+          .header .navigation .list_of_navigation_show .elemet_of_navigation a:hover {
+            border-bottom: 3px solid #F1CDB3; }
+        .header .navigation .list_of_navigation_show .active_link a {
+          padding-bottom: 3px;
+          font-family: Arial;
+          font-size: 32px;
+          font-weight: 400;
+          color: #FAFAFA;
+          text-decoration-line: none;
+          border-bottom: 3px solid #F1CDB3; }
+    .header .transparent_background_none {
+      display: none;
+      z-index: 1;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      opacity: 1;
+      transition: 1s; }
+    .header .transparent_background_show {
+      display: block;
+      z-index: 1;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      opacity: 0.6;
+      transition: 1s; }
 
   .background_donation .donation {
     padding-left: 50px;
