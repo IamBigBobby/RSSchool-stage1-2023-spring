@@ -1,9 +1,9 @@
 // burger
 
-let burger = document.querySelector('.burger_menu')
-console.log(burger)
-let navigationPanel = document.querySelector('.list_of_navigation')
-let transparentBackground = document.querySelector('.transparent_background_none')
+let burger = document.querySelector('.burger_menu');
+let navigationPanel = document.querySelector('.list_of_navigation');
+let transparentBackground = document.querySelector('.transparent_background_none');
+let link = document.querySelectorAll('.elemet_of_navigation');
 
 function moveBurger(){
     if (navigationPanel.classList.contains('list_of_navigation')){
@@ -45,5 +45,9 @@ function closeBurgerByBackground(){
     document.body.style.overflow = 'visible';
 }
 
+
+
 burger.addEventListener('click', moveBurger);
-transparentBackground.addEventListener('click', closeBurgerByBackground)
+transparentBackground.addEventListener('click', closeBurgerByBackground);
+link.forEach(element => element.addEventListener('click', closeBurgerByBackground));
+
