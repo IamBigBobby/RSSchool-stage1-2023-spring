@@ -1,6 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    position: relative;
+}
 
 // fonts
 $Arial: Arial;
@@ -82,6 +85,7 @@ $black_light: #545454;
     padding: 0px 40px;
 
     max-width: 1280px;
+
 }
 
 
@@ -480,19 +484,7 @@ $black_light: #545454;
         max-width: 768px;
         padding: 30px 30px;
     }
-    // header
-    .background_header{
-        height: 1165px;
-    }
-    .header{
-        flex-wrap: wrap;
-
-        .navigation{
-            .list_of_navigation{
-                display: flex;
-            }
-        }
-    }
+    
     // main
     .main{
         .friends_looking_for{
@@ -527,27 +519,189 @@ $black_light: #545454;
         }
     }
 }
+@media (max-width: 767px) {
+    .border_for_burger{
+        overflow: hidden;
+        .transparent_background_none{
+            display: none;
+            z-index: 10;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100vh;
+            background-color: black;
+            opacity: 0;
+            transition: 1s;
+        }
+        .transparent_background_show{
+            display: block;
+            z-index: 10;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100vw; 
+            height: 100vh;
+            background-color: black;
+            opacity: 0.6;
+            transition: 1s;
+        }
+        .header{
+            .navigation{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+    
+                position: relative;
+                .burger_menu{
+                    z-index: 1000;
+                    transition: 1s;
+                    span{
+                        display: block;
+                        height: 2px;
+                        width: 30px;
+                        background-color: $grey;
+                    }
+                    span:nth-child(2){
+                        margin-top: 8px;
+                        margin-bottom: 8px;
+                    }
+                }
+                .burger_menu_rotate{
+                    z-index: 1000;
+                    transform: rotate(90deg);
+                    transition: 1s;
+                    span{
+                        display: block;
+                        height: 2px;
+                        width: 30px;
+                        background-color: $grey;
+                    }
+                    span:nth-child(2){
+                        margin-top: 8px;
+                        margin-bottom: 8px;
+                    }
+                }
+                .list_of_navigation{
 
-@media screen and (max-width: 730px){
-    .header{
-        .navigation{
-            .burger_menu{
-                span{
-                    display: block;
-                    height: 2px;
-                    width: 30px;
+                    z-index: 500;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    align-items: center;
+                    justify-content: center;
+                    top: -50px;
+                    right: -420px;
                     background-color: $black;
+                    width: 320px;
+                    height: 850px;
+                    row-gap: 40px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    transition: 1s;
+                    .elemet_of_navigation{
+                        display: block;
+                        a{
+                            padding-bottom: 3px;
+            
+                            font-family: $Arial;
+                            font-size: 32px;
+                            font-weight: 400;
+            
+                            color: #FAFAFA;
+                            text-decoration-line: none;
+                        }
+                        a:hover{
+                            border-bottom: 3px solid $grey;
+                        }
+                    }
+                    .active_link{
+                        a{
+                            padding-bottom: 3px;
+            
+                            font-family: $Arial;
+                            font-size: 32px;
+                            font-weight: 400;
+            
+                            color: #FAFAFA;
+                            text-decoration-line: none;
+            
+                            border-bottom: 3px solid $grey;
+                        }   
+                    }
                 }
-                span:nth-child(2){
-                    margin-top: 8px;
-                    margin-bottom: 8px;
+                .list_of_navigation_show{
+                    z-index: 500;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    align-items: center;
+                    justify-content: center;
+                    top: -50px;
+                    right: -30px;
+                    background-color: $black;
+                    width: 320px;
+                    height: 850px;
+                    row-gap: 40px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+
+                    transition: 1s;
+                    .elemet_of_navigation{
+                        display: block;
+                        a{
+                            padding-bottom: 3px;
+            
+                            font-family: $Arial;
+                            font-size: 32px;
+                            font-weight: 400;
+            
+                            color: #FAFAFA;
+                            text-decoration-line: none;
+                        }
+                        a:hover{
+                            border-bottom: 3px solid $grey;
+                        }
+                    }
+                    .active_link{
+                        a{
+                            padding-bottom: 3px;
+            
+                            font-family: $Arial;
+                            font-size: 32px;
+                            font-weight: 400;
+            
+                            color: #FAFAFA;
+                            text-decoration-line: none;
+            
+                            border-bottom: 3px solid $grey;
+                        }   
+                    }
                 }
-            }
-            .list_of_navigation{
-                display: none;
             }
         }
     }
+}
+
+@media screen and (max-width: 730px){
+    // .header{
+    //     .navigation{
+    //         .burger_menu{
+    //             span{
+    //                 display: block;
+    //                 height: 2px;
+    //                 width: 30px;
+    //                 background-color: $black;
+    //             }
+    //             span:nth-child(2){
+    //                 margin-top: 8px;
+    //                 margin-bottom: 8px;
+    //             }
+    //         }
+    //         .list_of_navigation{
+    //             display: none;
+    //         }
+    //     }
+    // }
     .main{
         .friends_looking_for{
             padding-right: 10px;

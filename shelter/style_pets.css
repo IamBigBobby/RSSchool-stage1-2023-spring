@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth; }
 
+body {
+  position: relative; }
+
 .link_to_main {
   text-decoration: none; }
 
@@ -311,14 +314,6 @@ html {
     max-width: 768px;
     padding: 30px 30px; }
 
-  .background_header {
-    height: 1165px; }
-
-  .header {
-    flex-wrap: wrap; }
-    .header .navigation .list_of_navigation {
-      display: flex; }
-
   .main .friends_looking_for h1 {
     padding-top: 51px;
     padding-bottom: 9px; }
@@ -337,18 +332,129 @@ html {
     .footer .background_footer .wrapper {
       padding-top: 12px;
       padding-bottom: 0px; } }
+@media (max-width: 767px) {
+  .border_for_burger {
+    overflow: hidden; }
+    .border_for_burger .transparent_background_none {
+      display: none;
+      z-index: 10;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 100vh;
+      background-color: black;
+      opacity: 0;
+      transition: 1s; }
+    .border_for_burger .transparent_background_show {
+      display: block;
+      z-index: 10;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      opacity: 0.6;
+      transition: 1s; }
+    .border_for_burger .header .navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative; }
+      .border_for_burger .header .navigation .burger_menu {
+        z-index: 1000;
+        transition: 1s; }
+        .border_for_burger .header .navigation .burger_menu span {
+          display: block;
+          height: 2px;
+          width: 30px;
+          background-color: #F1CDB3; }
+        .border_for_burger .header .navigation .burger_menu span:nth-child(2) {
+          margin-top: 8px;
+          margin-bottom: 8px; }
+      .border_for_burger .header .navigation .burger_menu_rotate {
+        z-index: 1000;
+        transform: rotate(90deg);
+        transition: 1s; }
+        .border_for_burger .header .navigation .burger_menu_rotate span {
+          display: block;
+          height: 2px;
+          width: 30px;
+          background-color: #F1CDB3; }
+        .border_for_burger .header .navigation .burger_menu_rotate span:nth-child(2) {
+          margin-top: 8px;
+          margin-bottom: 8px; }
+      .border_for_burger .header .navigation .list_of_navigation {
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: -50px;
+        right: -420px;
+        background-color: #292929;
+        width: 320px;
+        height: 850px;
+        row-gap: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        transition: 1s; }
+        .border_for_burger .header .navigation .list_of_navigation .elemet_of_navigation {
+          display: block; }
+          .border_for_burger .header .navigation .list_of_navigation .elemet_of_navigation a {
+            padding-bottom: 3px;
+            font-family: Arial;
+            font-size: 32px;
+            font-weight: 400;
+            color: #FAFAFA;
+            text-decoration-line: none; }
+          .border_for_burger .header .navigation .list_of_navigation .elemet_of_navigation a:hover {
+            border-bottom: 3px solid #F1CDB3; }
+        .border_for_burger .header .navigation .list_of_navigation .active_link a {
+          padding-bottom: 3px;
+          font-family: Arial;
+          font-size: 32px;
+          font-weight: 400;
+          color: #FAFAFA;
+          text-decoration-line: none;
+          border-bottom: 3px solid #F1CDB3; }
+      .border_for_burger .header .navigation .list_of_navigation_show {
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: -50px;
+        right: -30px;
+        background-color: #292929;
+        width: 320px;
+        height: 850px;
+        row-gap: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        transition: 1s; }
+        .border_for_burger .header .navigation .list_of_navigation_show .elemet_of_navigation {
+          display: block; }
+          .border_for_burger .header .navigation .list_of_navigation_show .elemet_of_navigation a {
+            padding-bottom: 3px;
+            font-family: Arial;
+            font-size: 32px;
+            font-weight: 400;
+            color: #FAFAFA;
+            text-decoration-line: none; }
+          .border_for_burger .header .navigation .list_of_navigation_show .elemet_of_navigation a:hover {
+            border-bottom: 3px solid #F1CDB3; }
+        .border_for_burger .header .navigation .list_of_navigation_show .active_link a {
+          padding-bottom: 3px;
+          font-family: Arial;
+          font-size: 32px;
+          font-weight: 400;
+          color: #FAFAFA;
+          text-decoration-line: none;
+          border-bottom: 3px solid #F1CDB3; } }
 @media screen and (max-width: 730px) {
-  .header .navigation .burger_menu span {
-    display: block;
-    height: 2px;
-    width: 30px;
-    background-color: #292929; }
-  .header .navigation .burger_menu span:nth-child(2) {
-    margin-top: 8px;
-    margin-bottom: 8px; }
-  .header .navigation .list_of_navigation {
-    display: none; }
-
   .main .friends_looking_for {
     padding-right: 10px;
     padding-left: 10px; }
