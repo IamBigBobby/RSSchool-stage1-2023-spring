@@ -339,6 +339,9 @@ $black_light: #545454;
             justify-content: center;
             flex-wrap: wrap;
 
+            transition: 1s;
+            opacity: 1;
+
             .card_friend{
 
                 display: flex;
@@ -351,7 +354,9 @@ $black_light: #545454;
 
                 border-radius: 9px;
 
+
                 background-color: $white-light;
+
 
                 .photo_of_friend{
                     display: block;
@@ -376,6 +381,10 @@ $black_light: #545454;
                     margin-top: 10px;
                 }
             }
+        }
+        .our_friends_about_hidden{
+            transition: 1s;
+            opacity: 1;
         }
     }
     .button_get_to_know{

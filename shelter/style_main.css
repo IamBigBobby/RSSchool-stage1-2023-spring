@@ -221,7 +221,9 @@ html {
     .our_friends .pets_friends .our_friends_about {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      transition: 1s;
+      opacity: 1; }
       .our_friends .pets_friends .our_friends_about .card_friend {
         display: flex;
         flex-direction: column;
@@ -246,6 +248,9 @@ html {
           width: 187px;
           height: 52px;
           margin-top: 10px; }
+    .our_friends .pets_friends .our_friends_about_hidden {
+      transition: 1s;
+      opacity: 1; }
   .our_friends .button_get_to_know {
     display: block;
     text-decoration: none;
