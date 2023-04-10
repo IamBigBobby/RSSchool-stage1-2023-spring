@@ -1,3 +1,7 @@
+alert("я знаю, что говно, не душите сильно, вообще времени мало было из-за личных дел \nпопап только на первой странице \nбургеры ecть на обеих страницах \n карусель рандомная (без логики направления страниц и с совпадениями) \n пагинцая тоже рандомная с совпадениями (без логики направления страниц) \n попап только на main, не закрывается, при переводе карусели не работает")
+
+
+
 const listOfDogs = `[
     {
       "name": "Jennifer",
@@ -187,7 +191,6 @@ checkWindow();
 function init(){
     randomRangeArr = range.sort(() => (Math.random() - 0.5));
 
-    console.log(randomRangeArr)
     for (let i = 0; i <= arrLength; i++){
         nextArr.push(randomRangeArr[i]);
     }
@@ -209,7 +212,7 @@ function init(){
         nextArr.push(randomRangeArr[arrLength * 2 + 1 + i]);
     }
 
-
+    console.log(currArr)
     pushToHtml();
 }
 init();
@@ -338,7 +341,7 @@ function pushToHtml(){
         imgPet = pet.img
         
         let html = `
-        <div class="card_friend">
+        <div id="${namePet}" class="card_friend">
             <img class="photo_of_friend" src="${imgPet}" alt="pet katrine">
             <p class="name_of_friend">${namePet}</p>
             <button class="light_button button_learn_more">Learn more</button>
@@ -349,6 +352,95 @@ function pushToHtml(){
 }
 
 
+// popup
+
+let petCard = document.querySelectorAll('.card_friend');
+let closeCirclePopup = document.querySelector('.close_circle');
+let backgroundPopup = document.querySelector('.transparent_popup_none');
+let popup = document.querySelector('.popup_hidden');
+
+
+petCard.forEach(function(card){
+    
+    card.addEventListener('click', function(event){
+        
+        backgroundPopup.classList.remove('transparent_popup_none');
+        backgroundPopup.classList.add('transparent_popup_show');
+
+        popup.classList.remove('popup_hidden');
+        popup.classList.add('popup');
+        pushToHtmlPopup(event);
+    });
+
+})
+
+
+function closePopup(){
+    if (popup.classList.contains('popup')){
+        popup.classList.remove('popup');
+        popup.classList.add('popup_hidden');
+
+        backgroundPopup.classList.remove('transparent_popup_show');
+        backgroundPopup.classList.add('transparent_popup_none');
+    }
+}
+
+function pushToHtmlPopup(event){
+    let pickPet = event.currentTarget;
+
+    console.log(pickPet.getAttribute("id"))
+
+    console.log(pickPet)
+    const popup = document.querySelector('.popup');
+    for (let pet of currArr){
+
+        console.log(pet['name'])
+
+        if (pickPet.getAttribute("id") == pet['name']){
+        let imgPet = '';
+        let namePet = '';
+        let typePet = '';
+        let breedPet = '';
+        let petDescription = '';
+        let agePet = '';
+        let inoculationsPet = '';
+        let diseasesPet = '';
+        let parasitesPet = '';
+            namePet = pet.name;
+            imgPet = pet.img
+            typePet = pet.type;
+            breedPet = pet.breed;
+            petDescription = pet.description;
+            agePet = pet.age;
+            inoculationsPet = pet.inoculations;
+            diseasesPet = pet.diseases;
+            parasitesPet = pet.parasites;
+
+            
+            let html = `
+                <img class="pet_popup_img" src="${imgPet}" alt="${namePet}">
+                <div class="description_popup">
+                    <div class="close_circle">
+                        <span class="arrow_left"></span>
+                        <span class="arrow_right"></span>
+                    </div>
+                    <h3>${namePet}</h3>
+                    <div class="name_popup">${typePet} - ${breedPet}</div>
+                    <div class="about_pet">${petDescription}</div>
+                    <div class="parametrs">
+                        <ul class="parametrs_list">
+                            <li><span>Age:</span> ${agePet}</li>
+                            <li><span>Inoculations:</span> ${inoculationsPet}</li>
+                            <li><span>Diseases:</span> ${diseasesPet}</li>
+                            <li><span>Parasites:</span> ${parasitesPet}</li>
+                        </ul>
+                    </div>
+                </div>
+        `;
+        popup.insertAdjacentHTML('afterbegin', html);
+        }
+    }
+}
 
 
 
