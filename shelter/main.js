@@ -366,24 +366,12 @@ petCard.forEach(function(card){
         
         backgroundPopup.classList.remove('transparent_popup_none');
         backgroundPopup.classList.add('transparent_popup_show');
-
-        popup.classList.remove('popup_hidden');
-        popup.classList.add('popup');
         pushToHtmlPopup(event);
     });
 
 })
 
 
-function closePopup(){
-    if (popup.classList.contains('popup')){
-        popup.classList.remove('popup');
-        popup.classList.add('popup_hidden');
-
-        backgroundPopup.classList.remove('transparent_popup_show');
-        backgroundPopup.classList.add('transparent_popup_none');
-    }
-}
 
 function pushToHtmlPopup(event){
     let pickPet = event.currentTarget;
