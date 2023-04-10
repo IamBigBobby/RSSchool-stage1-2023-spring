@@ -167,8 +167,15 @@ body {
         display: block;
         margin: 0 auto;
         padding-top: 20px; }
+    .friends_looking_for .status_bar .circle_left_double .jackdaw {
+      transform: rotate(180deg);
+      margin: 20px auto; }
+    .friends_looking_for .status_bar .circle_left .jackdaw {
+      transform: rotate(180deg);
+      margin: 20px auto; }
     .friends_looking_for .status_bar .inactive_circle {
-      border: 2px solid #CDCDCD; }
+      border: 2px solid #CDCDCD;
+      pointer-events: none; }
     .friends_looking_for .status_bar .active_circle {
       border: 2px solid #F1CDB3;
       transition: 1s; }

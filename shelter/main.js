@@ -153,7 +153,6 @@ let sliderRight = document.querySelector('.circle_right');
 let listOfPets = document.querySelectorAll('.card_friend');
 
 sliderRight.addEventListener('click', function (){
-    listOfPets.forEach(element => element.classList.remove('card_friend'));
     changeToBackward()
     forward();
 })

@@ -250,8 +250,21 @@ $black_light: #545454;
                 padding-top: 20px;
             }
         }
+        .circle_left_double{
+            .jackdaw{
+                transform: rotate(180deg);
+                margin: 20px auto;
+            }
+        }
+        .circle_left{
+            .jackdaw{
+                transform: rotate(180deg);
+                margin: 20px auto;
+            }
+        }
         .inactive_circle{
             border: 2px solid #CDCDCD;
+            pointer-events: none;
         }
         .active_circle{
             border: 2px solid $grey;
