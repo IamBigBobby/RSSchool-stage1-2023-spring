@@ -1,6 +1,127 @@
 html {
   scroll-behavior: smooth; }
 
+body {
+  position: relative; }
+
+.transparent_popup_none {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: 1s; }
+
+.transparent_popup_show {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  transition: 1s; }
+
+.main_wrapper {
+  position: relative; }
+  .main_wrapper .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000000;
+    max-width: 900px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex; }
+    .main_wrapper .popup .pet_popup_img {
+      display: block; }
+    .main_wrapper .popup .description_popup {
+      display: flex;
+      flex-direction: column;
+      position: relative; }
+      .main_wrapper .popup .description_popup h3 {
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        margin-bottom: 0px;
+        color: #000000; }
+      .main_wrapper .popup .description_popup .name_popup {
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: #000000; }
+      .main_wrapper .popup .description_popup .about_pet {
+        font-family: 'Georgia';
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 110%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        letter-spacing: 0.06em;
+        color: #000000; }
+      .main_wrapper .popup .description_popup .parametrs_list {
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 110%;
+        padding-left: 0px;
+        letter-spacing: 0.06em;
+        color: #000000; }
+        .main_wrapper .popup .description_popup .parametrs_list li {
+          list-style-type: none;
+          margin-bottom: 10px; }
+          .main_wrapper .popup .description_popup .parametrs_list li span {
+            font-weight: 700; }
+        .main_wrapper .popup .description_popup .parametrs_list li::before {
+          color: #F1CDB3;
+          content: '\2022';
+          padding-right: 10px; }
+      .main_wrapper .popup .description_popup .close_circle {
+        position: absolute;
+        right: -52px;
+        top: -52px;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid #F1CDB3;
+        cursor: pointer;
+        transition: 1s; }
+        .main_wrapper .popup .description_popup .close_circle .arrow_left {
+          position: relative;
+          top: 25px;
+          left: 18px;
+          transform: rotate(45deg);
+          display: block;
+          width: 15px;
+          height: 2px;
+          background-color: black; }
+        .main_wrapper .popup .description_popup .close_circle .arrow_right {
+          position: relative;
+          top: 23px;
+          left: 18px;
+          transform: rotate(-45deg);
+          display: block;
+          width: 15px;
+          height: 2px;
+          background-color: black; }
+      .main_wrapper .popup .description_popup .close_circle:hover {
+        background-color: #FDDCC4; }
+  .main_wrapper .popup_hidden {
+    display: none; }
+
 .link_to {
   display: block;
   display: flex;
@@ -473,6 +594,100 @@ html {
           padding-left: 20px; }
 
 @media screen and (max-width: 1290px) {
+  .main_wrapper {
+    position: relative; }
+    .main_wrapper .popup {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100000000;
+      max-width: 630px;
+      height: 450px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex; }
+      .main_wrapper .popup .pet_popup_img {
+        display: block;
+        width: 350px;
+        height: 350px; }
+      .main_wrapper .popup .description_popup {
+        display: flex;
+        flex-direction: column;
+        position: relative; }
+        .main_wrapper .popup .description_popup h3 {
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 35px;
+          line-height: 130%;
+          letter-spacing: 0.06em;
+          margin-bottom: 0px;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .name_popup {
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .about_pet {
+          font-family: 'Georgia';
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 110%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          letter-spacing: 0.06em;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .parametrs_list {
+          font-family: 'Georgia';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 110%;
+          padding-left: 0px;
+          letter-spacing: 0.06em;
+          color: #000000; }
+          .main_wrapper .popup .description_popup .parametrs_list li {
+            list-style-type: none;
+            margin-bottom: 10px; }
+            .main_wrapper .popup .description_popup .parametrs_list li span {
+              font-weight: 700; }
+          .main_wrapper .popup .description_popup .parametrs_list li::before {
+            color: #F1CDB3;
+            content: '\2022';
+            padding-right: 10px; }
+        .main_wrapper .popup .description_popup .close_circle {
+          position: absolute;
+          right: -52px;
+          top: -52px;
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          border: 2px solid #F1CDB3;
+          cursor: pointer;
+          transition: 1s; }
+          .main_wrapper .popup .description_popup .close_circle .arrow_left {
+            position: relative;
+            top: 25px;
+            left: 18px;
+            transform: rotate(45deg);
+            display: block;
+            width: 15px;
+            height: 2px;
+            background-color: black; }
+          .main_wrapper .popup .description_popup .close_circle .arrow_right {
+            position: relative;
+            top: 23px;
+            left: 18px;
+            transform: rotate(-45deg);
+            display: block;
+            width: 15px;
+            height: 2px;
+            background-color: black; }
+        .main_wrapper .popup .description_popup .close_circle:hover {
+          background-color: #FDDCC4; }
+
   .about_the_shelter {
     padding-top: 65px;
     justify-content: center; }
@@ -529,6 +744,100 @@ html {
         position: relative;
         left: 25px;
         grid-column: 2 / 4; } }
+@media (max-width: 1035px) {
+  .main_wrapper {
+    position: relative; }
+    .main_wrapper .popup {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100000000;
+      max-width: 630px;
+      height: 450px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex; }
+      .main_wrapper .popup .pet_popup_img {
+        display: none;
+        width: 350px;
+        height: 350px; }
+      .main_wrapper .popup .description_popup {
+        display: flex;
+        flex-direction: column;
+        position: relative; }
+        .main_wrapper .popup .description_popup h3 {
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 35px;
+          line-height: 130%;
+          letter-spacing: 0.06em;
+          margin-bottom: 0px;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .name_popup {
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .about_pet {
+          font-family: 'Georgia';
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 110%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          letter-spacing: 0.06em;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .parametrs_list {
+          font-family: 'Georgia';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 110%;
+          padding-left: 0px;
+          letter-spacing: 0.06em;
+          color: #000000; }
+          .main_wrapper .popup .description_popup .parametrs_list li {
+            list-style-type: none;
+            margin-bottom: 10px; }
+            .main_wrapper .popup .description_popup .parametrs_list li span {
+              font-weight: 700; }
+          .main_wrapper .popup .description_popup .parametrs_list li::before {
+            color: #F1CDB3;
+            content: '\2022';
+            padding-right: 10px; }
+        .main_wrapper .popup .description_popup .close_circle {
+          position: absolute;
+          right: -52px;
+          top: -52px;
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          border: 2px solid #F1CDB3;
+          cursor: pointer;
+          transition: 1s; }
+          .main_wrapper .popup .description_popup .close_circle .arrow_left {
+            position: relative;
+            top: 25px;
+            left: 18px;
+            transform: rotate(45deg);
+            display: block;
+            width: 15px;
+            height: 2px;
+            background-color: black; }
+          .main_wrapper .popup .description_popup .close_circle .arrow_right {
+            position: relative;
+            top: 23px;
+            left: 18px;
+            transform: rotate(-45deg);
+            display: block;
+            width: 15px;
+            height: 2px;
+            background-color: black; }
+        .main_wrapper .popup .description_popup .close_circle:hover {
+          background-color: #FDDCC4; } }
 @media screen and (max-width: 768px) {
   .wrapper {
     max-width: 768px;
@@ -904,6 +1213,100 @@ html {
       justify-self: start;
       align-self: center; } }
 @media screen and (max-width: 320px) {
+  .main_wrapper {
+    position: relative; }
+    .main_wrapper .popup {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100000000;
+      max-width: 630px;
+      height: 450px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex; }
+      .main_wrapper .popup .pet_popup_img {
+        display: none;
+        width: 350px;
+        height: 350px; }
+      .main_wrapper .popup .description_popup {
+        display: flex;
+        flex-direction: column;
+        position: relative; }
+        .main_wrapper .popup .description_popup h3 {
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 35px;
+          line-height: 130%;
+          letter-spacing: 0.06em;
+          margin-bottom: 0px;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .name_popup {
+          font-family: Georgia;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .about_pet {
+          font-family: 'Georgia';
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 110%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          letter-spacing: 0.06em;
+          color: #000000; }
+        .main_wrapper .popup .description_popup .parametrs_list {
+          font-family: 'Georgia';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 110%;
+          padding-left: 0px;
+          letter-spacing: 0.06em;
+          color: #000000; }
+          .main_wrapper .popup .description_popup .parametrs_list li {
+            list-style-type: none;
+            margin-bottom: 10px; }
+            .main_wrapper .popup .description_popup .parametrs_list li span {
+              font-weight: 700; }
+          .main_wrapper .popup .description_popup .parametrs_list li::before {
+            color: #F1CDB3;
+            content: '\2022';
+            padding-right: 10px; }
+        .main_wrapper .popup .description_popup .close_circle {
+          position: absolute;
+          right: -52px;
+          top: -52px;
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          border: 2px solid #F1CDB3;
+          cursor: pointer;
+          transition: 1s; }
+          .main_wrapper .popup .description_popup .close_circle .arrow_left {
+            position: relative;
+            top: 25px;
+            left: 18px;
+            transform: rotate(45deg);
+            display: block;
+            width: 15px;
+            height: 2px;
+            background-color: black; }
+          .main_wrapper .popup .description_popup .close_circle .arrow_right {
+            position: relative;
+            top: 23px;
+            left: 18px;
+            transform: rotate(-45deg);
+            display: block;
+            width: 15px;
+            height: 2px;
+            background-color: black; }
+        .main_wrapper .popup .description_popup .close_circle:hover {
+          background-color: #FDDCC4; }
+
   .wrapper {
     max-width: 320px;
     padding: 30px 20px; }

@@ -2,6 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    position: relative;
+}
+
 // fonts
 $Arial: Arial;
 $Georgia: Georgia;
@@ -14,6 +18,162 @@ $white_dark: #F6F6F6;
 $white-light: #FAFAFA;
 $black: #292929;
 $black_light: #545454;
+
+// popup
+
+.transparent_popup_none{
+    display: none;
+    z-index: 10;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: 1s;
+}
+.transparent_popup_show{
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%; 
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    transition: 1s;
+}
+
+.main_wrapper{
+    position: relative;
+    .popup{
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        z-index: 100000000;
+        max-width: 900px;
+        height: 500px;
+        background-color: white;
+        border-radius: 10px;
+    
+        display: flex;
+        
+        .pet_popup_img{
+            display: block;
+        }
+        .description_popup{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+    
+            h3{
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+                margin-bottom: 0px;
+                color: #000000;
+            }
+            .name_popup{
+                font-family: $Georgia;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 115%;
+                letter-spacing: 0.06em;
+    
+                color: #000000;
+            }
+            .about_pet{
+                font-family: 'Georgia';
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 110%;
+
+                margin-top: 30px;
+                margin-bottom: 30px;
+    
+                letter-spacing: 0.06em;
+    
+                color: #000000;
+            }
+            .parametrs_list{
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 110%;
+                padding-left: 0px;
+                letter-spacing: 0.06em;
+    
+                color: #000000;
+    
+                li {
+                    list-style-type: none;
+                    margin-bottom: 10px;
+
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                li::before {
+                    color: $grey; 
+                    content: '\2022';
+                    padding-right: 10px;
+                }
+            }
+    
+            .close_circle{
+                position: absolute;
+    
+                right: -52px;
+                top: -52px;
+    
+                width: 52px;
+                height: 52px;
+    
+    
+                border-radius: 50%;
+                border: 2px solid $grey;
+    
+                cursor: pointer;
+    
+                transition: 1s;
+    
+                .arrow_left{
+                    position: relative;
+                    top: 25px;
+                    left: 18px;
+                    transform: rotate(45deg);
+                    display: block;
+                    width: 15px;
+                    height: 2px;
+                    background-color: black;
+                }
+                .arrow_right{
+                    position: relative;
+                    top: 23px;
+                    left: 18px;
+                    transform: rotate(-45deg);
+                    display: block;
+                    width: 15px;
+                    height: 2px;
+                    background-color: black;
+                }
+            }
+            .close_circle:hover{
+                background-color: $grey_light;
+            }
+        }
+    }
+    .popup_hidden{
+        display: none;
+    }
+}
+
 
 // link
 .link_to{
@@ -733,6 +893,133 @@ $black_light: #545454;
     }
 }
 @media screen and (max-width: 1290px) {
+
+    .main_wrapper{
+        position: relative;
+        .popup{
+            position: absolute;
+            top: 45%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            z-index: 100000000;
+            max-width: 630px;
+            height: 450px;
+            background-color: white;
+            border-radius: 10px;
+        
+            display: flex;
+            
+            .pet_popup_img{
+                display: block;
+                width: 350px;
+                height: 350px;
+            }
+            .description_popup{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+        
+                h3{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 35px;
+                    line-height: 130%;
+                    letter-spacing: 0.06em;
+                    margin-bottom: 0px;
+                    color: #000000;
+                }
+                .name_popup{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+                }
+                .about_pet{
+                    font-family: 'Georgia';
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 110%;
+    
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+        
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+                }
+                .parametrs_list{
+                    font-family: 'Georgia';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 110%;
+                    padding-left: 0px;
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+        
+                    li {
+                        list-style-type: none;
+                        margin-bottom: 10px;
+    
+                        span{
+                            font-weight: 700;
+                        }
+                    }
+                    li::before {
+                        color: $grey; 
+                        content: '\2022';
+                        padding-right: 10px;
+                    }
+                }
+        
+                .close_circle{
+                    position: absolute;
+        
+                    right: -52px;
+                    top: -52px;
+        
+                    width: 52px;
+                    height: 52px;
+        
+        
+                    border-radius: 50%;
+                    border: 2px solid $grey;
+        
+                    cursor: pointer;
+        
+                    transition: 1s;
+        
+                    .arrow_left{
+                        position: relative;
+                        top: 25px;
+                        left: 18px;
+                        transform: rotate(45deg);
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        background-color: black;
+                    }
+                    .arrow_right{
+                        position: relative;
+                        top: 23px;
+                        left: 18px;
+                        transform: rotate(-45deg);
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        background-color: black;
+                    }
+                }
+                .close_circle:hover{
+                    background-color: $grey_light;
+                }
+            }
+        }
+    }
     .about_the_shelter{
         padding-top: 65px;
         justify-content: center;
@@ -813,6 +1100,134 @@ $black_light: #545454;
     }
 }   
 
+@media (max-width: 1035px) {
+    .main_wrapper{
+        position: relative;
+        .popup{
+            position: absolute;
+            top: 45%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            z-index: 100000000;
+            max-width: 630px;
+            height: 450px;
+            background-color: white;
+            border-radius: 10px;
+        
+            display: flex;
+            
+            .pet_popup_img{
+                display: none;
+                width: 350px;
+                height: 350px;
+            }
+            .description_popup{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+        
+                h3{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 35px;
+                    line-height: 130%;
+                    letter-spacing: 0.06em;
+                    margin-bottom: 0px;
+                    color: #000000;
+                }
+                .name_popup{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+                }
+                .about_pet{
+                    font-family: 'Georgia';
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 110%;
+    
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+        
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+                }
+                .parametrs_list{
+                    font-family: 'Georgia';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 110%;
+                    padding-left: 0px;
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+        
+                    li {
+                        list-style-type: none;
+                        margin-bottom: 10px;
+    
+                        span{
+                            font-weight: 700;
+                        }
+                    }
+                    li::before {
+                        color: $grey; 
+                        content: '\2022';
+                        padding-right: 10px;
+                    }
+                }
+        
+                .close_circle{
+                    position: absolute;
+        
+                    right: -52px;
+                    top: -52px;
+        
+                    width: 52px;
+                    height: 52px;
+        
+        
+                    border-radius: 50%;
+                    border: 2px solid $grey;
+        
+                    cursor: pointer;
+        
+                    transition: 1s;
+        
+                    .arrow_left{
+                        position: relative;
+                        top: 25px;
+                        left: 18px;
+                        transform: rotate(45deg);
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        background-color: black;
+                    }
+                    .arrow_right{
+                        position: relative;
+                        top: 23px;
+                        left: 18px;
+                        transform: rotate(-45deg);
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        background-color: black;
+                    }
+                }
+                .close_circle:hover{
+                    background-color: $grey_light;
+                }
+            }
+        }
+    } 
+}
 
 // main adaptive
 @media screen and (max-width: 768px) {
@@ -1357,6 +1772,133 @@ $black_light: #545454;
     }
 }
 @media screen and (max-width: 320px){
+    .main_wrapper{
+        position: relative;
+        .popup{
+            position: absolute;
+            top: 45%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            z-index: 100000000;
+            max-width: 630px;
+            height: 450px;
+            background-color: white;
+            border-radius: 10px;
+        
+            display: flex;
+            
+            .pet_popup_img{
+                display: none;
+                width: 350px;
+                height: 350px;
+            }
+            .description_popup{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+        
+                h3{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 35px;
+                    line-height: 130%;
+                    letter-spacing: 0.06em;
+                    margin-bottom: 0px;
+                    color: #000000;
+                }
+                .name_popup{
+                    font-family: $Georgia;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+                }
+                .about_pet{
+                    font-family: 'Georgia';
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 110%;
+    
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+        
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+                }
+                .parametrs_list{
+                    font-family: 'Georgia';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 110%;
+                    padding-left: 0px;
+                    letter-spacing: 0.06em;
+        
+                    color: #000000;
+        
+                    li {
+                        list-style-type: none;
+                        margin-bottom: 10px;
+    
+                        span{
+                            font-weight: 700;
+                        }
+                    }
+                    li::before {
+                        color: $grey; 
+                        content: '\2022';
+                        padding-right: 10px;
+                    }
+                }
+        
+                .close_circle{
+                    position: absolute;
+        
+                    right: -52px;
+                    top: -52px;
+        
+                    width: 52px;
+                    height: 52px;
+        
+        
+                    border-radius: 50%;
+                    border: 2px solid $grey;
+        
+                    cursor: pointer;
+        
+                    transition: 1s;
+        
+                    .arrow_left{
+                        position: relative;
+                        top: 25px;
+                        left: 18px;
+                        transform: rotate(45deg);
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        background-color: black;
+                    }
+                    .arrow_right{
+                        position: relative;
+                        top: 23px;
+                        left: 18px;
+                        transform: rotate(-45deg);
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        background-color: black;
+                    }
+                }
+                .close_circle:hover{
+                    background-color: $grey_light;
+                }
+            }
+        }
+    } 
+
     .wrapper{
         max-width: 320px;
         padding: 30px 20px;
@@ -1565,6 +2107,5 @@ $black_light: #545454;
         }
     }
 }
-
 
 
