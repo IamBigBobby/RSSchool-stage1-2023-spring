@@ -1,7 +1,9 @@
 import { mineFiledArr } from "./createMatrix.js";
 
+export let generateTable;
 
 export function createTable(){
+
   let minesweeperProject = document.querySelector('.minesweeper-project');
   minesweeperProject.innerHTML = '';
   let minesweeperTable = `<table class="mine-field"></table>`;
@@ -17,9 +19,12 @@ export function createTable(){
       tr.appendChild(td);
     }
   }
+  generateTable = document.querySelector('.mine-field')
+  console.log(generateTable);
 }
 
 export function addMines(){
+
   let tds = document.querySelector('.mine-field').getElementsByTagName('td');
   for (let i = 0; i < 100; i++){
     if (mineFiledArr[i] == 1){
