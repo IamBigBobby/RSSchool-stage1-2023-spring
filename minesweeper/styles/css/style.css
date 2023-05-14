@@ -1,4 +1,10 @@
 .mine-field {
   border: 1px solid black; }
 
+.mine-field td {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border: 1px solid black; }
+
 /*# sourceMappingURL=style.css.map */
