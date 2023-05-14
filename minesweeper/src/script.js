@@ -1,6 +1,6 @@
-import { createField } from "./basicLogic.js";
+import { createTable } from "./utils/createFiled.js";
 
 function startGame(){
- createField();
+  createTable();
 }
 startGame();

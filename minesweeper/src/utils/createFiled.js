@@ -1,19 +1,11 @@
-export function createField(){
-  let mineFiledArr = [];
-
-  for (let i = 0; i < 10; i++){
-    mineFiledArr[i] = Math.round(Math.random() * 99999999).toString(2).slice(1,11).split('');
-  }
-  
-  console.log(mineFiledArr);
-
+export function createTable(){
   let minesweeperProject = document.querySelector('.minesweeper-project');
-  minesweeperProject.innerHTML = `<table class="mineField"></table>`;
+  minesweeperProject.innerHTML = '';
+  let minesweeperTable = `<table class="mine-field"></table>`;
 
-  minesweeperProject.insertAdjacentHTML('afterbegin', html);
+  minesweeperProject.insertAdjacentHTML('afterbegin', minesweeperTable);
+}
 
-  // for (let i = 0; i < 10; i++){
-  //   let td = document.createElement('td');
+export function createNodes (){
 
-  // }
 }
