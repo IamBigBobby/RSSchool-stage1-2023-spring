@@ -1,3 +1,6 @@
+import { mineFiledArr } from "./createMatrix.js";
+
+
 export function createTable(){
   let minesweeperProject = document.querySelector('.minesweeper-project');
   minesweeperProject.innerHTML = '';
@@ -13,6 +16,17 @@ export function createTable(){
       let td = document.createElement('td');
       tr.appendChild(td);
     }
+  }
+}
 
+export function addMines(){
+  let tds = document.querySelector('.mine-field').getElementsByTagName('td');
+  for (let i = 0; i < 100; i++){
+    if (mineFiledArr[i] == 1){
+      tds[i].classList.add('bomb');
+    }
+    else{
+      tds[i].classList.add('clear');
+    }
   }
 }
