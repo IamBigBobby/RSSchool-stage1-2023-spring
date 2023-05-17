@@ -1,6 +1,8 @@
 import { mineFiledArr } from "./createMatrix.js";
+import { checkField } from "./gameLogic.js";
 
 export let generateTable;
+export let generateCell;
 
 export function createTable(){
 
@@ -17,10 +19,11 @@ export function createTable(){
     for (let x = 0; x < 10; x++){
       let td = document.createElement('td');
       tr.appendChild(td);
+      td.addEventListener('click', checkField)
     }
   }
   generateTable = document.querySelector('.mine-field')
-  console.log(generateTable);
+  generateCell = document.getElementsByTagName('td');
 }
 
 export function addMines(){
