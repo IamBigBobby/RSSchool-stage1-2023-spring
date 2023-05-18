@@ -1,4 +1,5 @@
 export let mineFiledArr = [];
+export let twoDimensionalArr;
 let countBomb = 10;
 
 export function createMatrix (){
@@ -20,7 +21,7 @@ export function createMatrix (){
 
   let chunkArr = (arr, cnt) => arr.reduce((prev, cur, i, a) => !(i % cnt) ? prev.concat([a.slice(i, i + cnt)]) : prev, []);
 
-  let twoDimensionalArr = chunkArr(mineFiledArr, 10);
+  twoDimensionalArr = chunkArr(mineFiledArr, 10);
 
-  console.log(twoDimensionalArr);
+  // console.log(twoDimensionalArr);
 }

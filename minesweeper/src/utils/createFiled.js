@@ -16,7 +16,6 @@ export function createTable(){
   for (let y = 0; y < 10; y++){
     let tr = document.createElement('tr');
     document.querySelector('.mine-field').appendChild(tr);
-    tr.addEventListener('click', checkField);
 
     for (let x = 0; x < 10; x++){
       let td = document.createElement('td');
