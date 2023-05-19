@@ -1,13 +1,10 @@
 
-import { mineFiledArr, twoDimensionalArr } from "./createMatrix.js";
+import { twoDimensionalArr } from "./createMatrix.js";
 
 
 export function checkField(event){
 
-  // console.log(twoDimensionalArr[event.target.y][event.target.x], event.target);
-
-  console.log(twoDimensionalArr[event.target.y][event.target.x])
-
+  console.log(event.target)
 
   if (twoDimensionalArr[event.target.y][event.target.x] === 1){
     console.log('game over');
@@ -44,25 +41,13 @@ export function checkField(event){
         numberOfBombs++;
       }
     }
-
-    console.log(numberOfBombs)
+    console.log(numberOfBombs);
+    if (numberOfBombs > 0){
+      event.target.innerHTML = numberOfBombs
+    }
   }
 }
 
-function checkCell(x, y){
-  if (x <= 0){
-    return false; 
-  }
-  else if (x >= 9){
-    return false;
-  }
-  else if (y < 0){
-    return false;
-  }
-  else if (y >= 9){
-    return false;
-  }
-}
 
 
 
