@@ -1,14 +1,21 @@
 .mine-field{
   border: 1px solid black;
 }
-
 .mine-field td{
   width: 25px;
   height: 25px;
   cursor: pointer;
   border: 1px solid black;
 }
-
 .bomb{
   background-color: red;
+}
+.empty{
+  background-color: blue;
+}
+.near-bomb{
+  background-color: yellow;
+}
+.check{
+  background-color: pink;
 }

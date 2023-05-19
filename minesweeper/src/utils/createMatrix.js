@@ -6,10 +6,12 @@ export function createMatrix (){
 
 
   // for(var i = 0; i < 10; i++){
-  // mineFiledArr[i] = Math.round(Math.random() * 50 + 30).toString(2)
+  // mineFiledArr[i] = Math.round(Math.random() * 50 + 30).toString(2).slice(0, 5).split('');
   // }
 
-  // console.log(mineFiledArr)
+  // console.log(mineFiledArr, mineFiledArr[0][0])
+
+
   for (let i = 0; i < 100; i++){
     mineFiledArr[i] = 0;
   }
@@ -22,6 +24,5 @@ export function createMatrix (){
   let chunkArr = (arr, cnt) => arr.reduce((prev, cur, i, a) => !(i % cnt) ? prev.concat([a.slice(i, i + cnt)]) : prev, []);
 
   twoDimensionalArr = chunkArr(mineFiledArr, 10);
-
-  // console.log(twoDimensionalArr);
+ 
 }

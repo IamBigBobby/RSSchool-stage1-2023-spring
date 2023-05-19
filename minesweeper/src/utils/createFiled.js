@@ -1,8 +1,8 @@
 import { mineFiledArr } from "./createMatrix.js";
 import { checkField } from "./gameLogic.js";
 
-export let x;
-export let y;
+// export let x;
+// export let y;
 export let cells;
 
 export function createTable(){
@@ -19,10 +19,10 @@ export function createTable(){
 
     for (let x = 0; x < 10; x++){
       let td = document.createElement('td');
-      tr.appendChild(td);
       td.x = x;
       td.y = y;
       td.addEventListener('click', checkField);
+      tr.appendChild(td);
     }
   }
 }
