@@ -1,5 +1,5 @@
-import { sideSize } from "../script.js";
-import { mineFiledArr } from "./createMatrix.js";
+
+import { mineFiledArr, sideSize } from "./createMatrix.js";
 import { clickButton } from "./gameLogic.js";
 
 export let mineField;

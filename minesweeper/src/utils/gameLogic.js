@@ -1,12 +1,11 @@
 
-import { countBomb, sideSize } from "../script.js";
 import { mineField } from "./createFiled.js";
-import { twoDimensionalArr } from "./createMatrix.js";
+import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
 import { countMoves } from "./moves.js";
 import { timer } from "./timer.js";
 
 let findBombs = 0;
-let timerState = false;
+export let timerState = false;
 
 
 export function clickButton(event){

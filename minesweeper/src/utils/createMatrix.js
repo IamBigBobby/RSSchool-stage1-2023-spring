@@ -1,7 +1,9 @@
-import { countBomb, sideSize } from "../script.js";
+import { startGame } from "../script.js";
 
 export let mineFiledArr = [];
 export let twoDimensionalArr;
+export let countBomb = 10;
+export let sideSize = 10;
 
 
 export function createMatrix (){
@@ -32,4 +34,32 @@ export function createMatrix (){
   let chunkArr = (arr, cnt) => arr.reduce((prev, cur, i, a) => !(i % cnt) ? prev.concat([a.slice(i, i + cnt)]) : prev, []);
 
   twoDimensionalArr = chunkArr(mineFiledArr, sideSize);
+  console.log(mineFiledArr.length)
+}
+
+export function choosenDifficulty(){
+  let buttons = document.querySelectorAll('.button');
+  console.log(buttons)
+  buttons.forEach((button) =>{
+    button.addEventListener('click', function(event){
+      if (event.target.classList.contains('easy')){
+        countBomb = 10;
+        sideSize = 10;
+        mineFiledArr = [];
+        startGame();
+      }
+      else if (event.target.classList.contains('normal')){
+        countBomb = 20;
+        sideSize = 15;
+        mineFiledArr = [];
+        startGame();
+      }
+      else if (event.target.classList.contains('hard')){
+        countBomb = 30;
+        sideSize = 25;
+        mineFiledArr = [];
+        startGame();
+      }
+    })
+  })
 }
