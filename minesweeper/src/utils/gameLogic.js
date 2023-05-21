@@ -3,6 +3,7 @@ import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
 import { countMoves } from "./moves.js";
 
 let findBombs = 0;
+let safeCells;
 
 export function clickButton(event){
 
@@ -40,7 +41,8 @@ function checkField(x, y){
     return element.classList.contains('near-bomb');
   });
 
-  let safeCells = resultEmptyCells.length + resultNearBombCells.length
+  safeCells = resultEmptyCells.length + resultNearBombCells.length
+
 
   if (safeCells === sideSize ** 2 - countBomb){
     congratulations();
@@ -124,11 +126,14 @@ function addFlag(event){
     event.target.classList.toggle('flag');
   }
 
-
-  console.log(findBombs)
 }
 
-function congratulations(){
-  console.log('you win!!!')
+export function congratulations(){
+  if (safeCells === sideSize ** 2 - countBomb || findBombs == countBomb){
+    return true;
+  }
+  else{
+    return false
+  }
 }
 

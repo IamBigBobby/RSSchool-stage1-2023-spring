@@ -1,8 +1,21 @@
+import { congratulations } from "./gameLogic.js"
 
 export function timer(){
   let timer = document.querySelector('.timer')
-  setInterval(function(){
+
+
+
+  let timerOn = setInterval(function(){
     timer.value = Number(timer.value) + 1
-  }, 1000)
+    console.log(congratulations());
+    if (congratulations() === true){
+      clearInterval(timerOn); 
+    }
+  }
+ ,1000)
+
+
+
 }
 
+ 
