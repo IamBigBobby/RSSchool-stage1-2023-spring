@@ -4,10 +4,11 @@ import { countMoves } from "./moves.js";
 
 let findBombs = 0;
 
-
 export function clickButton(event){
 
-  countMoves();
+  if (!event.target.classList.contains('empty') && !event.target.classList.contains('near-bomb')){
+    countMoves();
+  }
 
   document.oncontextmenu = function(event){
     event.preventDefault();
@@ -106,7 +107,7 @@ function checkAroundCells(x, y){
 }
 
 function addFlag(event){
-  console.log(event.target)
+  
   if (event.target.classList.contains('bomb') && !event.target.classList.contains('flag')){
     findBombs++;
     event.target.classList.add('flag');

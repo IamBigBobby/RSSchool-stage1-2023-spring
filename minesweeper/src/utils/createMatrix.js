@@ -74,7 +74,7 @@ export function turnOnTimer(){
   console.log(cells);
 
   cells.forEach((cell) => {
-    cell.addEventListener('click', function(event){
+    cell.addEventListener('mousedown', function(event){
       if (!timerState){
         timer();
         timerState = true;
