@@ -1,8 +1,7 @@
 
 import { mineField } from "./createFiled.js";
-import { sideSize, twoDimensionalArr } from "./createMatrix.js";
+import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
 
-let gameWinArr = [];
 let findBombs = 0;
 
 export function clickButton(event){
@@ -14,7 +13,6 @@ export function clickButton(event){
     checkField(event.target.x, event.target.y);
   }
   else if (event.button === 2){
-    console.log('right');
     addFlag(event);
   }
 }
@@ -89,14 +87,27 @@ function checkAroundCells(x, y){
 }
 
 function addFlag(event){
-  if ((event.target.classList.contains('clear') || event.target.classList.contains('bomb')) && !event.target.classList.contains('near-bomb') && !event.target.classList.contains('empty')){
+  console.log(event.target)
+  if (event.target.classList.contains('bomb') && !event.target.classList.contains('flag')){
+    findBombs++;
+    event.target.classList.add('flag');
+    if (findBombs == countBomb){
+      congratulations();
+    }
+  }
+  else if(event.target.classList.contains('flag') && !event.target.classList.contains('clear')){
+    event.target.classList.remove('flag');
+    --findBombs;;
+  }
+
+  if ((event.target.classList.contains('clear')) && !event.target.classList.contains('near-bomb') && !event.target.classList.contains('empty')){
     event.target.classList.toggle('flag');
   }
-  if (event.target.classList.contains('bomb')){
-    findBombs++
-  }
-  if(event.target.classList.contains('bomb') && event.target.classList.contains('flag')){
-    console.log('yes');
-  }
+
+
   console.log(findBombs)
+}
+
+function congratulations(){
+  console.log('you win!!!')
 }

@@ -1,7 +1,7 @@
 
 export let mineFiledArr = [];
 export let twoDimensionalArr;
-export let countBomb = 20;
+export let countBomb = 10;
 export let sideSize = 10;
 
 export function createMatrix (){
