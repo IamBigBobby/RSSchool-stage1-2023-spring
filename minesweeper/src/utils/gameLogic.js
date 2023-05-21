@@ -1,6 +1,6 @@
 
 import { mineField } from "./createFiled.js";
-import { twoDimensionalArr } from "./createMatrix.js";
+import { sideSize, twoDimensionalArr } from "./createMatrix.js";
 
 export function clickButton(event){
 
@@ -27,7 +27,7 @@ function checkField(x, y){
 }
 
 function checkAroundCells(x, y){
-  if (x > 9 || y > 9 || x < 0 || y < 0){
+  if (x > sideSize - 1 || y > sideSize - 1 || x < 0 || y < 0){
     return;
   }
   if (mineField.rows[y].cells[x].classList.contains('empty') || mineField.rows[y].cells[x].classList.contains('near-bomb') || mineField.rows[y].cells[x].classList.contains('flag')){
@@ -53,7 +53,7 @@ function checkAroundCells(x, y){
     }
   }
 
-  if (y + 1 <= 9){
+  if (y + 1 <= sideSize - 1){
     if (twoDimensionalArr[y + 1][x] === 1){
       numberOfBombs++;
     }
@@ -72,7 +72,7 @@ function checkAroundCells(x, y){
   }
   else{
     mineField.rows[y].cells[x].classList.add('empty');
-    if (y >= 0 && y <= 9 && x >=0 && x <= 9){
+    if (y >= 0 && y <= sideSize - 1 && x >=0 && x <= sideSize - 1){
       checkAroundCells(x + 1, y);
       checkAroundCells(x - 1, y);
       checkAroundCells(x, y + 1);

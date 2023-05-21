@@ -1,4 +1,4 @@
-import { mineFiledArr } from "./createMatrix.js";
+import { mineFiledArr, sideSize } from "./createMatrix.js";
 import { clickButton } from "./gameLogic.js";
 
 export let mineField;
@@ -11,11 +11,11 @@ export function createTable(){
 
   minesweeperProject.insertAdjacentHTML('afterbegin', minesweeperTable);
 
-  for (let y = 0; y < 10; y++){
+  for (let y = 0; y < sideSize; y++){
     let tr = document.createElement('tr');
     document.querySelector('.mine-field').appendChild(tr);
 
-    for (let x = 0; x < 10; x++){
+    for (let x = 0; x < sideSize; x++){
       let td = document.createElement('td');
       td.x = x;
       td.y = y;
@@ -29,7 +29,7 @@ export function createTable(){
 export function addMines(){
 
   let tds = document.querySelector('.mine-field').getElementsByTagName('td');
-  for (let i = 0; i < 100; i++){
+  for (let i = 0; i < sideSize ** 2; i++){
     if (mineFiledArr[i] == 1){
       tds[i].classList.add('bomb');
     }
