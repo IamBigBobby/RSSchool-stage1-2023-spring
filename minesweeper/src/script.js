@@ -1,5 +1,5 @@
 import { createTable, addMines } from "./utils/createFiled.js";
-import { choosenDifficulty, createMatrix, mineFiledArr, } from "./utils/createMatrix.js";
+import { choosenDifficulty, createMatrix, mineFiledArr, turnOnTimer, } from "./utils/createMatrix.js";
 
 
 export function startGame(){
@@ -7,8 +7,9 @@ export function startGame(){
   createMatrix();
   createTable();
   addMines();
-  mineFiledArr = [];
+  turnOnTimer();
   choosenDifficulty();
+
 }
 startGame();
 

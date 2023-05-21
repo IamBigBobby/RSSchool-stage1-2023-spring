@@ -1,19 +1,11 @@
-
 import { mineField } from "./createFiled.js";
 import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
 import { countMoves } from "./moves.js";
-import { timer } from "./timer.js";
 
 let findBombs = 0;
-export let timerState = false;
 
 
 export function clickButton(event){
-
-  if (!timerState){
-    timer();
-    timerState = true;
-  }
 
   countMoves();
 

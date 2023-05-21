@@ -1,10 +1,12 @@
 import { startGame } from "../script.js";
+import { clickButton } from "./gameLogic.js";
+import { timer } from "./timer.js";
 
 export let mineFiledArr = [];
 export let twoDimensionalArr;
 export let countBomb = 10;
 export let sideSize = 10;
-
+export let timerState = false;
 
 export function createMatrix (){
 
@@ -46,19 +48,36 @@ export function choosenDifficulty(){
         countBomb = 10;
         sideSize = 10;
         mineFiledArr = [];
+        timerState = false;
         startGame();
       }
       else if (event.target.classList.contains('normal')){
         countBomb = 20;
         sideSize = 15;
         mineFiledArr = [];
+        timerState = false;
         startGame();
       }
       else if (event.target.classList.contains('hard')){
         countBomb = 30;
         sideSize = 25;
         mineFiledArr = [];
+        timerState = false;
         startGame();
+      }
+    })
+  })
+}
+
+export function turnOnTimer(){
+  let cells = document.querySelectorAll('td')
+  console.log(cells);
+
+  cells.forEach((cell) => {
+    cell.addEventListener('click', function(event){
+      if (!timerState){
+        timer();
+        timerState = true;
       }
     })
   })
