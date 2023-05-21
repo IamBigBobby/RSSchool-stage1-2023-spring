@@ -1,5 +1,5 @@
 import { mineFiledArr } from "./createMatrix.js";
-import { сheckField } from "./gameLogic.js";
+import { clickButton } from "./gameLogic.js";
 
 export let mineField;
 
@@ -19,7 +19,7 @@ export function createTable(){
       let td = document.createElement('td');
       td.x = x;
       td.y = y;
-      td.addEventListener('click', сheckField);
+      td.addEventListener('mousedown', clickButton);
       tr.appendChild(td);
     }
   }

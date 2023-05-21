@@ -2,9 +2,21 @@
 import { mineField } from "./createFiled.js";
 import { twoDimensionalArr } from "./createMatrix.js";
 
+export function clickButton(event){
+  console.log(event);
+  document.oncontextmenu = function(event){
+    event.preventDefault();
+  }
+  if (event.button === 0){
+    console.log('left');
+  }
+  else if (event.button === 2){
+    console.log('right');
+  }
+}
+
 export function сheckField(x, y){
 
-  // console.log(twoDimensionalArr.length)
   x = this.x;
   y = this.y;
 
@@ -77,120 +89,8 @@ function checkAroundCells(x, y){
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function checkCells(x, y){
-
-//   let checkLeft;
-//   let checkRight;
-//   console.log(x)
-//   if(x > 0 && x <= 9){
-
-//     if (mineField.rows[y].cells[x - 1].classList.contains('clear')){
-//       mineField.rows[y].cells[x - 1].classList.add('empty');
-//       checkLeft = x - 1;
-//       // checkAroundCells(checkLeft, y);
-//     }
-//     else if (mineField.rows[y].cells[x - 1].classList.contains('bomb')){
-//       mineField.rows[y].cells[x - 1].classList.add('near-bomb');
-//       return;
-//     }
-
-//     if (mineField.rows[y].cells[x + 1].classList.contains('clear')){
-//       mineField.rows[y].cells[x + 1].classList.add('empty');
-//       checkRight = x + 1;
-//       // checkAroundCells(checkRight, y);
-//     }
-//     else if (mineField.rows[y].cells[x + 1].classList.contains('bomb')){
-//       mineField.rows[y].cells[x + 1].classList.add('near-bomb');
-//       return;
-//     }
-//   }
-//   console.log(checkLeft, checkRight);
-// }
-
-
-
-
-// function checkField(x, y){
-//   console.log(x, y)
-
-//   if(y === 0){
-//     console.log("yes")
-//     console.log(mineField.rows[y].cells[x + 1]);
-//     console.log(mineField.rows[y].cells[x - 1]);
-//     console.log(mineField.rows[y + 1].cells[x]);
-//     console.log(mineField.rows[y + 1].cells[x + 1]);
-//     console.log(mineField.rows[y + 1].cells[x - 1]);
-//   }
-//   else if (y === 9){
-//     console.log(mineField.rows[y].cells[x + 1]);
-//     console.log(mineField.rows[y].cells[x - 1]); 
-//     console.log(mineField.rows[y - 1].cells[x]);
-//     console.log(mineField.rows[y - 1].cells[x - 1]);
-//     console.log(mineField.rows[y - 1].cells[x + 1]);    
-//   }
-//   else{
-//     console.log(mineField.rows[y].cells[x + 1]);
-//     console.log(mineField.rows[y].cells[x - 1]);
-//     console.log(mineField.rows[y + 1].cells[x]);
-//     console.log(mineField.rows[y + 1].cells[x + 1]);
-//     console.log(mineField.rows[y + 1].cells[x - 1]);
-//     console.log(mineField.rows[y - 1].cells[x]);
-//     console.log(mineField.rows[y - 1].cells[x - 1]);
-//     console.log(mineField.rows[y - 1].cells[x + 1]);    
-//   }
-// }
-
-
-// function checkRightField(x, y){
-//   if (x + 1 <= 9 && x - 1 <= 0){
-//     if (mineField.rows[y].cells[x + 1].classList.contains('clear')){
-//       mineField.rows[y].cells[x + 1].classList.add('empty');
-//       checkAroundCells(x + 1, y);
-//     }
-//     else if (mineField.rows[y].cells[x + 1].classList.contains('bomb')){
-//       mineField.rows[y].cells[x + 1].classList.add('near-bomb');
-//       return;
-//     }
-//   }
-// }
-
-// function checkLeftField(x, y){
-//   if (x - 1 >= 0 && x + 1 <= 9){
-//     if (mineField.rows[y].cells[x - 1].classList.contains('clear')){
-//       mineField.rows[y].cells[x - 1].classList.add('empty');
-//       checkAroundCells(x - 1, y);
-//     }
-//     else if (mineField.rows[y].cells[x - 1].classList.contains('bomb')){
-//       mineField.rows[y].cells[x - 1].classList.add('near-bomb');
-//       return;
-//     }
-//   }
-// }
+function addFlag(event){
+  if(event.button === 2){
+    this.classList.add('green')
+  }
+}
