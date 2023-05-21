@@ -2,6 +2,9 @@
 import { mineField } from "./createFiled.js";
 import { sideSize, twoDimensionalArr } from "./createMatrix.js";
 
+let gameWinArr = [];
+let findBombs = 0;
+
 export function clickButton(event){
 
   document.oncontextmenu = function(event){
@@ -89,4 +92,11 @@ function addFlag(event){
   if ((event.target.classList.contains('clear') || event.target.classList.contains('bomb')) && !event.target.classList.contains('near-bomb') && !event.target.classList.contains('empty')){
     event.target.classList.toggle('flag');
   }
+  if (event.target.classList.contains('bomb')){
+    findBombs++
+  }
+  if(event.target.classList.contains('bomb') && event.target.classList.contains('flag')){
+    console.log('yes');
+  }
+  console.log(findBombs)
 }
