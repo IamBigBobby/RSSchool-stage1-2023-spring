@@ -1,10 +1,22 @@
 
+import { countBomb, sideSize } from "../script.js";
 import { mineField } from "./createFiled.js";
-import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
+import { twoDimensionalArr } from "./createMatrix.js";
+import { countMoves } from "./moves.js";
+import { timer } from "./timer.js";
 
 let findBombs = 0;
+let timerState = false;
+
 
 export function clickButton(event){
+
+  if (!timerState){
+    timer();
+    timerState = true;
+  }
+
+  countMoves();
 
   document.oncontextmenu = function(event){
     event.preventDefault();
@@ -24,6 +36,22 @@ function checkField(x, y){
   }
   else{
     checkAroundCells(x, y);
+  }
+
+  let clearCells = document.querySelectorAll('.clear');
+
+  let resultEmptyCells = Object.values(clearCells).filter((element) => {
+    return element.classList.contains('empty');
+  });
+
+  let resultNearBombCells = Object.values(clearCells).filter((element) => {
+    return element.classList.contains('near-bomb');
+  });
+
+  let safeCells = resultEmptyCells.length + resultNearBombCells.length
+
+  if (safeCells === sideSize ** 2 - countBomb){
+    congratulations();
   }
 }
 
@@ -111,3 +139,4 @@ function addFlag(event){
 function congratulations(){
   console.log('you win!!!')
 }
+

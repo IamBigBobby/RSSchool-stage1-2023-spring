@@ -1,11 +1,8 @@
-export let seconds;
 
 export function timer(){
-  seconds = 0;
-  setInterval(tickTime, 1000) 
+  let timer = document.querySelector('.timer')
+  setInterval(function(){
+    timer.value = Number(timer.value) + 1
+  }, 1000)
 }
 
-function tickTime(){
-  seconds++
-  console.log(seconds)
-}
