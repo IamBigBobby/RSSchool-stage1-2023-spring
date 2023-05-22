@@ -1,6 +1,7 @@
 import { mineField } from "./createFiled.js";
 import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
 import { countMoves } from "./moves.js";
+import { timer } from "./timer.js";
 
 let findBombs = 0;
 export let safeCells;
@@ -45,7 +46,7 @@ function checkField(x, y){
 
 
   if (safeCells === sideSize ** 2 - countBomb){
-    congratulations();
+    setTimeout(congratulations(), 1000) ;
   }
 }
 
@@ -129,11 +130,6 @@ function addFlag(event){
 }
 
 export function congratulations(){
-  if (safeCells === sideSize ** 2 - countBomb || findBombs == countBomb){
-    return true;
-  }
-  else{
-    return false
-  }
+alert(`You win!!! Сleared ${countBomb} mines in ${timer()} seconds using ${countMoves()} moves!`)
 }
 

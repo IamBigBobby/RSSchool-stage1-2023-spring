@@ -3,7 +3,7 @@ import { safeCells } from "./gameLogic.js";
 
 
 export function timer(){
-  let timer = document.querySelector('.timer')
+  let timer = document.querySelector('.timer');
 
 
 
@@ -12,10 +12,13 @@ export function timer(){
     if ( safeCells === sideSize ** 2 - countBomb){
       clearInterval(timerOn); 
     }
+    console.log(timer.value)
+    return timer.value
   }
  ,1000)
 
-
+  return timer.value
+  console.log(timer.value)
 
 }
 

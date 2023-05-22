@@ -66,22 +66,6 @@ export function choosenDifficulty(){
   })
 }
 
-
-
-
-// setting of timer
-export function turnOnTimer(){
-  let cells = document.querySelectorAll('td')
-  cells.forEach((cell) => {
-    cell.addEventListener('mousedown', function(event){
-      if (!timerState){
-        timer();
-        timerState = true;
-      }
-    })
-  })
-}
-
 export function choosenCountOfMines(){
   let inputFiled = document.querySelector('.input-count-value');
   console.log(inputFiled.value)
@@ -108,4 +92,21 @@ export function choosenCountOfMines(){
     }
   })
 }
+
+
+
+
+// setting of timer
+export function turnOnTimer(){
+  let cells = document.querySelectorAll('td')
+  cells.forEach((cell) => {
+    cell.addEventListener('mousedown', function(event){
+      if (!timerState){
+        timer();
+        timerState = true;
+      }
+    })
+  })
+}
+
 
