@@ -143,6 +143,9 @@ export function congratulations(){
   visibleBomb.forEach((bomb) => {
     bomb.classList.add('bomb-vision');
   })
+
+  let gameTable = document.querySelector('.mine-field')
+  gameTable.style.pointerEvents = 'none';
 }
 
 export function gameOver(x, y){
@@ -157,7 +160,10 @@ export function gameOver(x, y){
   visibleBomb.forEach((bomb) => {
     bomb.classList.add('bomb-vision');
   })
-  
+
+  let gameTable = document.querySelector('.mine-field')
+  gameTable.style.pointerEvents = 'none';
+
 if (twoDimensionalArr[y][x] === 1){
   return gameOverStatus = true;
 }
