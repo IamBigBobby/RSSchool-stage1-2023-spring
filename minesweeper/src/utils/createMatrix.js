@@ -1,5 +1,4 @@
 import { startGame } from "../script.js";
-import { clickButton } from "./gameLogic.js";
 import { timer } from "./timer.js";
 
 export let mineFiledArr = [];
@@ -36,12 +35,10 @@ export function createMatrix (){
   let chunkArr = (arr, cnt) => arr.reduce((prev, cur, i, a) => !(i % cnt) ? prev.concat([a.slice(i, i + cnt)]) : prev, []);
 
   twoDimensionalArr = chunkArr(mineFiledArr, sideSize);
-  console.log(mineFiledArr.length)
 }
 
 export function choosenDifficulty(){
   let buttons = document.querySelectorAll('.button');
-  console.log(buttons)
   buttons.forEach((button) =>{
     button.addEventListener('click', function(event){
       if (event.target.classList.contains('easy')){
@@ -71,7 +68,7 @@ export function choosenDifficulty(){
 
 export function turnOnTimer(){
   let cells = document.querySelectorAll('td')
-  console.log(cells);
+
 
   cells.forEach((cell) => {
     cell.addEventListener('mousedown', function(event){
@@ -82,3 +79,4 @@ export function turnOnTimer(){
     })
   })
 }
+

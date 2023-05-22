@@ -1,4 +1,6 @@
-import { congratulations } from "./gameLogic.js"
+import { countBomb, sideSize } from "./createMatrix.js";
+import { safeCells } from "./gameLogic.js";
+
 
 export function timer(){
   let timer = document.querySelector('.timer')
@@ -6,9 +8,8 @@ export function timer(){
 
 
   let timerOn = setInterval(function(){
-    timer.value = Number(timer.value) + 1
-    console.log(congratulations());
-    if (congratulations() === true){
+    timer.value = Number(timer.value) + 1;
+    if ( safeCells === sideSize ** 2 - countBomb){
       clearInterval(timerOn); 
     }
   }

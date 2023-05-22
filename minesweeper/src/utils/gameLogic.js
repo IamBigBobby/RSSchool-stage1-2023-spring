@@ -3,7 +3,7 @@ import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
 import { countMoves } from "./moves.js";
 
 let findBombs = 0;
-let safeCells;
+export let safeCells;
 
 export function clickButton(event){
 
