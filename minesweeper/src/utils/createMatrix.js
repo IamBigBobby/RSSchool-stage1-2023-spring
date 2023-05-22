@@ -68,6 +68,10 @@ export function choosenDifficulty(){
         timerState = false;
         startGame();
       }
+      else if (event.target.classList.contains('change-theme')){
+        let mineFiled = document.querySelector('.minesweeper-project');
+        mineFiled.classList.toggle('dark-theme');
+      }
     })
   })
 }

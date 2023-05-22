@@ -21,20 +21,20 @@ export function createTable(){
 
   let clockTag = 
   `<div class="clock">
-    <p>Время, сек</p>
-    <input class="timer" value="0">
+    <p>Time,<br> seconds</p>
+    <input class="timer" value="0" disabled>
   </div>`;
 
   let numberOfMovesTag = 
   `<div class="move-table">
-    <p>Количество ходов</p>
-    <input class="moves" value="0">
+    <p>Count of <br> moves</p>
+    <input class="moves" value="0" disabled>
   </div>`;
 
   let bombCounterTag = 
   `<div class="move-table">
-    <p>Количество бомб на поле</p>
-    <input class="bomb-counter" value="${countBomb}">
+    <p>Count of bombs <br> on the field</p>
+    <input class="bomb-counter" value="${countBomb}" disabled>
   </div>`;
 
   let difficultyLevelsTag = 
@@ -61,11 +61,12 @@ export function createTable(){
     <button class="button normal">Normal 15X15</button>
     <button class="button hard">Hard 25X25</button>
     <button class="button new-game">New game</button>
+    <button class="button change-theme">Change theme</button>
   </div>`;
 
   let inputCountTag = 
   `<div class="input-count">
-    <p>Количестов бомб 1-99</p>
+    <p>Enter your count of bombs <br> 1-99</p>
     <input class="input-count-value" value="${countBomb}" min="1" max="99">
   </div>`;
 

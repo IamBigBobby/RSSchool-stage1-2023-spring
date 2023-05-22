@@ -117,9 +117,6 @@ function addFlag(event){
   if (event.target.classList.contains('bomb') && !event.target.classList.contains('flag')){
     findBombs++;
     event.target.classList.add('flag');
-    if (findBombs == countBomb){
-      congratulations();
-    }
   }
   else if(event.target.classList.contains('flag') && !event.target.classList.contains('clear')){
     event.target.classList.remove('flag');
@@ -175,7 +172,12 @@ if (twoDimensionalArr[y][x] === 1){
   let visibleBomb = document.querySelectorAll('.bomb');
   
   visibleBomb.forEach((bomb) => {
-    bomb.classList.add('bomb-vision');
+    if (bomb.classList.contains('flag')){
+      bomb.classList.add('break-flag')
+    }
+    else{
+      bomb.classList.add('bomb-vision');
+    }
   })
 
   let gameTable = document.querySelector('.mine-field')
