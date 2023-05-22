@@ -74,7 +74,7 @@ input{
 
 
 .bomb-vision{
-  background-image: url('/styles/assets/bomb.jpg');
+  background: url('../../assets/bomb.jpg');
   background-repeat: round;
 }
 .empty{
@@ -87,10 +87,10 @@ input{
   background-color: yellow;
 }
 .flag{
-  background-image: url('/styles/assets/flag.jpg');
+  background-image: url('../../assets/flag.jpg');
   background-repeat: round;
 }
 .break-flag{
-  background-image: url('/styles/assets/cross.jpg');
+  background-image: url('../../assets/cross.jpg');
   background-repeat: round;
 }
