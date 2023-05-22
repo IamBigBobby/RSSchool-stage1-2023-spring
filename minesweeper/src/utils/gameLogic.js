@@ -1,5 +1,6 @@
+import { startGame } from "../script.js";
 import { mineField } from "./createFiled.js";
-import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
+import { chooseInNotification, countBomb, mineFiledArr, sideSize, timerState, twoDimensionalArr } from "./createMatrix.js";
 import { countMoves } from "./moves.js";
 import { timer } from "./timer.js";
 
@@ -30,6 +31,7 @@ function checkField(x, y){
     gameOver(x, y);
   }
   else{
+    gameOver(x, y);
     checkAroundCells(x, y);
   }
 
@@ -133,10 +135,17 @@ function addFlag(event){
 export function congratulations(){
   console.log('win')
   let winCongratulations = document.createElement('div');
-  winCongratulations.innerHTML = `You win! Cleared ${countBomb} mines in ${timer()} seconds using ${countMoves()} moves`;
+  winCongratulations.innerHTML = 
+  `<p class="win-notification">You win! Cleared ${countBomb} mines in ${timer()} seconds using ${countMoves()} moves</p>
+  <div class="button-container-notification">
+    <button class="button refresh-game"> Of course </button>
+    <button class="button close-app"> Close app </button>
+  </div>`;
 
   let tableMine = document.querySelector('.mine-field');
-  document.body.insertBefore(winCongratulations, tableMine)
+  document.body.insertBefore(winCongratulations, tableMine);
+  
+  chooseInNotification();
 
   let visibleBomb = document.querySelectorAll('.bomb');
   
@@ -149,11 +158,19 @@ export function congratulations(){
 }
 
 export function gameOver(x, y){
+if (twoDimensionalArr[y][x] === 1){
   let loseCongratulations = document.createElement('div');
-  loseCongratulations.innerHTML = `You lose!`;
+  loseCongratulations.innerHTML = 
+  `<p class="lose-notification">You lose! Try again?</p>
+  <div class="button-container-notification">
+    <button class="button refresh-game"> Of course </button>
+    <button class="button close-app"> Close app </button>
+  </div>`;
 
   let tableMine = document.querySelector('.mine-field');
-  document.body.insertBefore(loseCongratulations, tableMine)
+  document.body.insertBefore(loseCongratulations, tableMine);
+
+  chooseInNotification();
 
   let visibleBomb = document.querySelectorAll('.bomb');
   
@@ -164,8 +181,11 @@ export function gameOver(x, y){
   let gameTable = document.querySelector('.mine-field')
   gameTable.style.pointerEvents = 'none';
 
-if (twoDimensionalArr[y][x] === 1){
+
   return gameOverStatus = true;
+}
+else{
+  return gameOverStatus = false;
 }
 }
 

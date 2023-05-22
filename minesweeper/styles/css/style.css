@@ -1,3 +1,7 @@
+.minesweeper-project {
+  display: flex;
+  flex-direction: column; }
+
 .mine-field {
   margin: 0 auto;
   border: 1px solid black; }
@@ -27,8 +31,13 @@
   margin: 0 auto;
   width: 200px; }
 
-.notification-win-none, .notification-lose-none {
-  display: none; }
+.win-notification, .lose-notification {
+  text-align: center; }
+
+.button-container-notification {
+  padding: 10px;
+  display: flex;
+  justify-content: center; }
 
 .notification-lose, .notification-win {
   color: red; }

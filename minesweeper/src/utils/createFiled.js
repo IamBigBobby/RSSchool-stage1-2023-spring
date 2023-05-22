@@ -57,9 +57,10 @@ export function createTable(){
   let difficultyLevels = document.querySelector('.difficulty-levels');
   difficultyLevels.innerHTML = 
   `<div class="difficulty-levels">
-    <button class="button easy">Easy</button>
-    <button class="button normal">Normal</button>
-    <button class="button hard">Hard</button>
+    <button class="button easy">Easy 10X10</button>
+    <button class="button normal">Normal 15X15</button>
+    <button class="button hard">Hard 25X25</button>
+    <button class="button new-game">New game</button>
   </div>`;
 
   let inputCountTag = 

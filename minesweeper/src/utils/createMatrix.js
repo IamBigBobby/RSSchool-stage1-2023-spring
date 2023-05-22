@@ -1,4 +1,5 @@
 import { startGame } from "../script.js";
+import { gameOver } from "./gameLogic.js";
 import { timer } from "./timer.js";
 
 export let mineFiledArr = [];
@@ -62,6 +63,11 @@ export function choosenDifficulty(){
         timerState = false;
         startGame();
       }
+      else if (event.target.classList.contains('new-game')){
+        mineFiledArr = [];
+        timerState = false;
+        startGame();
+      }
     })
   })
 }
@@ -93,7 +99,15 @@ export function choosenCountOfMines(){
   })
 }
 
-
+export function chooseInNotification(){
+  // console.log(gameOver());
+  let refreshGame = document.querySelector('.refresh-game');
+  refreshGame.addEventListener('click', () =>{
+    mineFiledArr = [];
+    timerState = false;
+    startGame();
+  })
+}
 
 
 // setting of timer

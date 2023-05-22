@@ -6,7 +6,6 @@ export function timer(){
   let timer = document.querySelector('.timer');
 
 
-
   let timerOn = setInterval(function(){
     console.log(gameOverStatus)
     if ( safeCells === sideSize ** 2 - countBomb || gameOverStatus == true){
