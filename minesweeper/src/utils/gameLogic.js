@@ -137,6 +137,12 @@ export function congratulations(){
 
   let tableMine = document.querySelector('.mine-field');
   document.body.insertBefore(winCongratulations, tableMine)
+
+  let visibleBomb = document.querySelectorAll('.bomb');
+  
+  visibleBomb.forEach((bomb) => {
+    bomb.classList.add('bomb-vision');
+  })
 }
 
 export function gameOver(x, y){
@@ -145,6 +151,13 @@ export function gameOver(x, y){
 
   let tableMine = document.querySelector('.mine-field');
   document.body.insertBefore(loseCongratulations, tableMine)
+
+  let visibleBomb = document.querySelectorAll('.bomb');
+  
+  visibleBomb.forEach((bomb) => {
+    bomb.classList.add('bomb-vision');
+  })
+  
 if (twoDimensionalArr[y][x] === 1){
   return gameOverStatus = true;
 }

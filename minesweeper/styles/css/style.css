@@ -39,6 +39,9 @@
 .bomb {
   background-color: red; }
 
+.bomb-vision {
+  background-image: url("/styles/assets/bomb.jpg"); }
+
 .empty {
   background-color: blue; }
 
