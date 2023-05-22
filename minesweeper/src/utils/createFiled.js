@@ -10,12 +10,10 @@ export function createTable(){
   minesweeperProject.innerHTML = '';
 
   let tableInformationTag = `<div class="table-information"></div>`
-  
-  let minesweeperTable = `<table class="mine-field"></table>`;
+  let minesweeperTableTag = `<table class="mine-field"></table>`;
 
-  minesweeperProject.insertAdjacentHTML('afterbegin', minesweeperTable);
+  minesweeperProject.insertAdjacentHTML('afterbegin', minesweeperTableTag);
   minesweeperProject.insertAdjacentHTML('beforeend', tableInformationTag);
-
   
   
   let tableInformation = document.querySelector('.table-information');

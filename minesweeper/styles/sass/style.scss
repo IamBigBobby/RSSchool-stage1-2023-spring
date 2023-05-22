@@ -31,7 +31,12 @@
   width: 200px;
 }
 
-
+.notification-win-none, .notification-lose-none{
+  display: none;
+}
+.notification-lose, .notification-win{
+  color: red;
+}
 .clock{
   border: 1px dotted black;
 }

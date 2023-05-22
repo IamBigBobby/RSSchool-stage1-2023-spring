@@ -132,9 +132,19 @@ function addFlag(event){
 
 export function congratulations(){
   console.log('win')
+  let winCongratulations = document.createElement('div');
+  winCongratulations.innerHTML = `You win! Cleared ${countBomb} mines in ${timer()} seconds using ${countMoves()} moves`;
+
+  let tableMine = document.querySelector('.mine-field');
+  document.body.insertBefore(winCongratulations, tableMine)
 }
 
 export function gameOver(x, y){
+  let loseCongratulations = document.createElement('div');
+  loseCongratulations.innerHTML = `You lose!`;
+
+  let tableMine = document.querySelector('.mine-field');
+  document.body.insertBefore(loseCongratulations, tableMine)
 if (twoDimensionalArr[y][x] === 1){
   return gameOverStatus = true;
 }
