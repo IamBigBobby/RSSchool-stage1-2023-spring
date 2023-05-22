@@ -1,5 +1,5 @@
-import { countBomb, sideSize } from "./createMatrix.js";
-import { safeCells } from "./gameLogic.js";
+import { countBomb, sideSize, twoDimensionalArr } from "./createMatrix.js";
+import { gameOverStatus, safeCells } from "./gameLogic.js";
 
 
 export function timer(){
@@ -8,18 +8,17 @@ export function timer(){
 
 
   let timerOn = setInterval(function(){
-    timer.value = Number(timer.value) + 1;
-    if ( safeCells === sideSize ** 2 - countBomb){
+    console.log(gameOverStatus)
+    if ( safeCells === sideSize ** 2 - countBomb || gameOverStatus == true){
       clearInterval(timerOn); 
     }
+    timer.value = Number(timer.value) + 1;
     console.log(timer.value)
     return timer.value
   }
  ,1000)
 
   return timer.value
-  console.log(timer.value)
-
 }
 
  

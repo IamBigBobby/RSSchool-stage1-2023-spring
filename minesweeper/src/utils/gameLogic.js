@@ -5,6 +5,7 @@ import { timer } from "./timer.js";
 
 let findBombs = 0;
 export let safeCells;
+export let gameOverStatus = false;
 
 export function clickButton(event){
 
@@ -26,7 +27,7 @@ export function clickButton(event){
 function checkField(x, y){
 
   if (twoDimensionalArr[y][x] === 1){
-    console.log('game over');
+    gameOver(x, y);
   }
   else{
     checkAroundCells(x, y);
@@ -130,6 +131,12 @@ function addFlag(event){
 }
 
 export function congratulations(){
-alert(`You win!!! Сleared ${countBomb} mines in ${timer()} seconds using ${countMoves()} moves!`)
+  console.log('win')
+}
+
+export function gameOver(x, y){
+if (twoDimensionalArr[y][x] === 1){
+  return gameOverStatus = true;
+}
 }
 
