@@ -1,0 +1,96 @@
+.minesweeper-project{
+  background-color:rgb(119, 218, 95);
+  display: flex;
+  flex-direction: column;
+  align-content:center;
+  align-items: center;
+
+  font-family: 'Pangolin', cursive;
+}
+.dark-theme{
+  background-color: rgb(92, 86, 86);
+  color: white;
+}
+.mine-field{
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.mine-field td{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.table-information{
+  margin: 0 auto;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.difficulty-levels{
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  button{
+    display: block;
+  }
+}
+
+input{
+  max-width: 100px;
+  text-align: center;
+  background-color: white;
+}
+
+.input-count{
+  text-align: center;
+  margin: 0 auto;
+  width: 200px;
+}
+.win-notification, .lose-notification{
+  text-align: center;
+}
+.button-container-notification{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.notification-lose, .notification-win{
+  color: red;
+}
+
+
+
+
+.bomb-vision{
+  background-image: url('/styles/assets/bomb.jpg');
+  background-repeat: round;
+}
+.empty{
+  background-color: blue;
+}
+.check{
+  background-color: pink;
+}
+.near-bomb{
+  background-color: yellow;
+}
+.flag{
+  background-image: url('/styles/assets/flag.jpg');
+  background-repeat: round;
+}
+.break-flag{
+  background-image: url('/styles/assets/cross.jpg');
+  background-repeat: round;
+}
