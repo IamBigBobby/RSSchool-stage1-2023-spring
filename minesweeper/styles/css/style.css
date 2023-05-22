@@ -22,6 +22,11 @@
   .difficulty-levels button {
     display: block; }
 
+.input-count {
+  text-align: center;
+  margin: 0 auto;
+  width: 200px; }
+
 .clock {
   border: 1px dotted black; }
 

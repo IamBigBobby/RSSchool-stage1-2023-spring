@@ -4,6 +4,7 @@ import { timer } from "./timer.js";
 export let mineFiledArr = [];
 export let twoDimensionalArr;
 export let countBomb = 10;
+export let countBombTable;
 export let sideSize = 10;
 export let timerState = false;
 
@@ -37,26 +38,25 @@ export function createMatrix (){
   twoDimensionalArr = chunkArr(mineFiledArr, sideSize);
 }
 
+
+// settings of the sideSize and countBomb
 export function choosenDifficulty(){
   let buttons = document.querySelectorAll('.button');
   buttons.forEach((button) =>{
     button.addEventListener('click', function(event){
       if (event.target.classList.contains('easy')){
-        countBomb = 10;
         sideSize = 10;
         mineFiledArr = [];
         timerState = false;
         startGame();
       }
       else if (event.target.classList.contains('normal')){
-        countBomb = 20;
         sideSize = 15;
         mineFiledArr = [];
         timerState = false;
         startGame();
       }
       else if (event.target.classList.contains('hard')){
-        countBomb = 30;
         sideSize = 25;
         mineFiledArr = [];
         timerState = false;
@@ -66,10 +66,12 @@ export function choosenDifficulty(){
   })
 }
 
+
+
+
+// setting of timer
 export function turnOnTimer(){
   let cells = document.querySelectorAll('td')
-
-
   cells.forEach((cell) => {
     cell.addEventListener('mousedown', function(event){
       if (!timerState){
@@ -77,6 +79,33 @@ export function turnOnTimer(){
         timerState = true;
       }
     })
+  })
+}
+
+export function choosenCountOfMines(){
+  let inputFiled = document.querySelector('.input-count-value');
+  console.log(inputFiled.value)
+  inputFiled.addEventListener('keypress', function(event){
+    if (event.key === "Enter"){
+        if (inputFiled.value > 99){
+          countBomb = 99;
+          mineFiledArr = [];
+          timerState = false;
+          startGame();
+        }
+        else if (inputFiled.value < 1){
+          countBomb = 1;
+          mineFiledArr = [];
+          timerState = false;
+          startGame();
+        }
+        else{
+          countBomb = inputFiled.value;
+        mineFiledArr = [];
+        timerState = false;
+        startGame();
+        }
+    }
   })
 }
 

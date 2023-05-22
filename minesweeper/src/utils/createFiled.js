@@ -1,5 +1,5 @@
 
-import { mineFiledArr, sideSize } from "./createMatrix.js";
+import { countBomb, mineFiledArr, sideSize } from "./createMatrix.js";
 import { clickButton } from "./gameLogic.js";
 
 export let mineField;
@@ -21,30 +21,57 @@ export function createTable(){
   let tableInformation = document.querySelector('.table-information');
   tableInformation.innerHTML = ''
 
-  let clock = 
+  let clockTag = 
   `<div class="clock">
     <p>Время, сек</p>
     <input class="timer" value="0">
   </div>`;
 
-  let numberOfMoves = 
+  let numberOfMovesTag = 
   `<div class="move-table">
     <p>Количество ходов</p>
     <input class="moves" value="0">
   </div>`;
 
-  let difficultyLevels = 
+  let bombCounterTag = 
+  `<div class="move-table">
+    <p>Количество бомб на поле</p>
+    <input class="bomb-counter" value="${countBomb}">
+  </div>`;
+
+  let difficultyLevelsTag = 
   `<div class="difficulty-levels">
     <button class="button easy">Easy</button>
     <button class="button normal">Normal</button>
     <button class="button hard">Hard</button>
   </div>`
 
+ 
 
 
-  tableInformation.insertAdjacentHTML('afterbegin', clock);
-  tableInformation.insertAdjacentHTML('afterbegin', numberOfMoves)
-  tableInformation.insertAdjacentHTML('afterend', difficultyLevels)
+
+  tableInformation.insertAdjacentHTML('afterbegin', clockTag);
+  tableInformation.insertAdjacentHTML('afterbegin', numberOfMovesTag);
+  tableInformation.insertAdjacentHTML('afterbegin', bombCounterTag);
+  tableInformation.insertAdjacentHTML('afterend', difficultyLevelsTag);
+  // tableInformation.insertAdjacentElement('afterend', slider)
+  
+  let difficultyLevels = document.querySelector('.difficulty-levels');
+  difficultyLevels.innerHTML = 
+  `<div class="difficulty-levels">
+    <button class="button easy">Easy</button>
+    <button class="button normal">Normal</button>
+    <button class="button hard">Hard</button>
+  </div>`;
+
+  let inputCountTag = 
+  `<div class="input-count">
+    <p>Количестов бомб 1-99</p>
+    <input class="input-count-value" value="${countBomb}" min="1" max="99">
+  </div>`;
+
+  difficultyLevels.insertAdjacentHTML('afterend', inputCountTag)
+
 
 
 
