@@ -10,7 +10,6 @@ export function startGame(){
   turnOnTimer();
   choosenDifficulty();
   choosenCountOfMines();
-  chooseInNotification()
 }
 startGame();
 
